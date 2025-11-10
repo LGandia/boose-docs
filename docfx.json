@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../BOOSEapplication/bin/Debug/net8.0-windows/",
+          "files": [
+            "BOOSEapplication.Doc.dll",
+            "BOOSEapplication.Doc.xml"
+          ]
+        },
+        { 
+          "src":"../BOOSEapplication.Tests/bin/Debug/net8.0-windows/",
+          "files": [
+            "BOOSEapplication.Tests.dll",
+            "BOOSEapplication.Tests.xml"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["index.md"],
+        "dest": "."
+      },
+      {
+        "files": ["api/*.yml"],
+        "dest": "api"
+      },
+      {
+        "files": ["api/toc.yml"],
+        "dest": "api"
+      }
+    ],
+    "output": "_site",
+    "template": ["default", "modern"],
+    "globalMetadata": {
+      "_appName": "BOOSEapplicationDocumentation",
+      "_appTitle": "BOOSEapplicationDocumentation",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  },
+  "disableGitFeatures": true
+}

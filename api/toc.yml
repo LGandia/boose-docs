@@ -1,0 +1,47 @@
+### YamlMime:TableOfContent
+items:
+- uid: BOOSEapplication
+  name: BOOSEapplication
+  type: Namespace
+  items:
+  - uid: BOOSEapplication.AppCanvas
+    name: AppCanvas
+    type: Class
+  - uid: BOOSEapplication.AppCommandFactory
+    name: AppCommandFactory
+    type: Class
+  - uid: BOOSEapplication.AppCommandOneParameter
+    name: AppCommandOneParameter
+    type: Class
+  - uid: BOOSEapplication.AppCommandTwoParameters
+    name: AppCommandTwoParameters
+    type: Class
+  - uid: BOOSEapplication.AppParser
+    name: AppParser
+    type: Class
+  - uid: BOOSEapplication.AppStoredProgram
+    name: AppStoredProgram
+    type: Class
+  - uid: BOOSEapplication.Circle
+    name: Circle
+    type: Class
+  - uid: BOOSEapplication.DrawToCommand
+    name: DrawToCommand
+    type: Class
+  - uid: BOOSEapplication.MoveToCommand
+    name: MoveToCommand
+    type: Class
+  - uid: BOOSEapplication.PenCommand
+    name: PenCommand
+    type: Class
+  - uid: BOOSEapplication.Rect
+    name: Rect
+    type: Class
+- uid: BOOSEapplication.Tests
+  name: BOOSEapplication.Tests
+  type: Namespace
+  items:
+  - uid: BOOSEapplication.Tests.AppCanvasTests
+    name: AppCanvasTests
+    type: Class
+memberLayout: SamePage
