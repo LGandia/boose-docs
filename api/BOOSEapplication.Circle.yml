@@ -5,9 +5,9 @@ items:
   id: Circle
   parent: BOOSEapplication
   children:
-  - BOOSEapplication.Circle.#ctor
   - BOOSEapplication.Circle.Compile
   - BOOSEapplication.Circle.Execute
+  - BOOSEapplication.Circle.Set(BOOSE.StoredProgram,System.String)
   langs:
   - csharp
   - vb
@@ -16,16 +16,22 @@ items:
   fullName: BOOSEapplication.Circle
   type: Class
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/Circle.cs
+    remote:
+      path: BOOSEapplication/Circle.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Circle
+    path: ../BOOSEapplication/Circle.cs
+    startLine: 10
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
   summary: >-
-    Represents the CIRCLE command in the BOOSE application.
+    Implements the CIRCLE command for the BOOSE scripting engine.
 
-    Draws a circle with an unfilled circle with specified radius at the current position on the canvas.
+    This command draws a circle at the current canvas position using
 
-    Inherits from <xref href="BOOSEapplication.AppCommandOneParameter" data-throw-if-not-resolved="false"></xref> and uses a single int as radius&gt;.
+    a radius that may be a literal, a variable, or an expression.
   example: []
   syntax:
     content: 'public class Circle : AppCommandOneParameter, ICommand'
@@ -36,17 +42,55 @@ items:
   implements:
   - BOOSE.ICommand
   inheritedMembers:
-  - BOOSEapplication.AppCommandOneParameter.param1
+  - BOOSEapplication.AppCommandOneParameter.rawParam
   - BOOSEapplication.AppCommandOneParameter.Program
-  - BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
   - BOOSEapplication.AppCommandOneParameter.CheckParameters(System.String[])
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BOOSEapplication.Circle.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BOOSEapplication.Circle.Set(BOOSE.StoredProgram,System.String)
+  id: Set(BOOSE.StoredProgram,System.String)
+  parent: BOOSEapplication.Circle
+  langs:
+  - csharp
+  - vb
+  name: Set(StoredProgram, string)
+  nameWithType: Circle.Set(StoredProgram, string)
+  fullName: BOOSEapplication.Circle.Set(BOOSE.StoredProgram, string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/Circle.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Set
+    path: ../BOOSEapplication/Circle.cs
+    startLine: 22
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Configures the CIRCLE command by storing the raw parameter string.
+  example: []
+  syntax:
+    content: public override void Set(StoredProgram program, string parameters)
+    parameters:
+    - id: program
+      type: BOOSE.StoredProgram
+      description: The program instance executing this command.
+    - id: parameters
+      type: System.String
+      description: The radius expression to evaluate.
+    content.vb: Public Overrides Sub [Set](program As StoredProgram, parameters As String)
+  overridden: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
+  overload: BOOSEapplication.Circle.Set*
+  nameWithType.vb: Circle.Set(StoredProgram, String)
+  fullName.vb: BOOSEapplication.Circle.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
 - uid: BOOSEapplication.Circle.Compile
   commentId: M:BOOSEapplication.Circle.Compile
   id: Compile
@@ -59,11 +103,17 @@ items:
   fullName: BOOSEapplication.Circle.Compile()
   type: Method
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/Circle.cs
+    remote:
+      path: BOOSEapplication/Circle.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Compile
+    path: ../BOOSEapplication/Circle.cs
+    startLine: 31
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: Executes the CIRCLE command by drawing an unfilled circle on the canvas.
+  summary: CIRCLE has no compile‑time behaviour.
   example: []
   syntax:
     content: public override void Compile()
@@ -82,52 +132,29 @@ items:
   fullName: BOOSEapplication.Circle.Execute()
   type: Method
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/Circle.cs
+    remote:
+      path: BOOSEapplication/Circle.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute
+    path: ../BOOSEapplication/Circle.cs
+    startLine: 37
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: Executes the CIRCLE command by drawing an unfilled circle on the canvas.
+  summary: >-
+    Executes the CIRCLE command by resolving the radius parameter
+
+    and drawing a circle on the canvas if the radius is valid.
   example: []
   syntax:
     content: public override void Execute()
     content.vb: Public Overrides Sub Execute()
   overridden: BOOSEapplication.AppCommandOneParameter.Execute
   overload: BOOSEapplication.Circle.Execute*
-- uid: BOOSEapplication.Circle.#ctor
-  commentId: M:BOOSEapplication.Circle.#ctor
-  id: '#ctor'
-  parent: BOOSEapplication.Circle
-  langs:
-  - csharp
-  - vb
-  name: Circle()
-  nameWithType: Circle.Circle()
-  fullName: BOOSEapplication.Circle.Circle()
-  type: Constructor
-  source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/Circle.cs
-  assemblies:
-  - BOOSEapplication.Doc
-  namespace: BOOSEapplication
-  syntax:
-    content: public Circle()
-    content.vb: Public Sub New()
-  overload: BOOSEapplication.Circle.#ctor*
-  nameWithType.vb: Circle.New()
-  fullName.vb: BOOSEapplication.Circle.New()
-  name.vb: New()
 references:
-- uid: BOOSEapplication.AppCommandOneParameter
-  commentId: T:BOOSEapplication.AppCommandOneParameter
-  parent: BOOSEapplication
-  isExternal: true
-  href: BOOSEapplication.AppCommandOneParameter.html
-  name: AppCommandOneParameter
-  nameWithType: AppCommandOneParameter
-  fullName: BOOSEapplication.AppCommandOneParameter
 - uid: BOOSEapplication
   commentId: N:BOOSEapplication
-  isExternal: true
   href: BOOSEapplication.html
   name: BOOSEapplication
   nameWithType: BOOSEapplication
@@ -143,6 +170,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: BOOSEapplication.AppCommandOneParameter
+  commentId: T:BOOSEapplication.AppCommandOneParameter
+  parent: BOOSEapplication
+  href: BOOSEapplication.AppCommandOneParameter.html
+  name: AppCommandOneParameter
+  nameWithType: AppCommandOneParameter
+  fullName: BOOSEapplication.AppCommandOneParameter
 - uid: BOOSE.ICommand
   commentId: T:BOOSE.ICommand
   parent: BOOSE
@@ -150,65 +184,20 @@ references:
   name: ICommand
   nameWithType: ICommand
   fullName: BOOSE.ICommand
-- uid: BOOSEapplication.AppCommandOneParameter.param1
-  commentId: F:BOOSEapplication.AppCommandOneParameter.param1
+- uid: BOOSEapplication.AppCommandOneParameter.rawParam
+  commentId: F:BOOSEapplication.AppCommandOneParameter.rawParam
   parent: BOOSEapplication.AppCommandOneParameter
-  isExternal: true
-  href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_param1
-  name: param1
-  nameWithType: AppCommandOneParameter.param1
-  fullName: BOOSEapplication.AppCommandOneParameter.param1
+  href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_rawParam
+  name: rawParam
+  nameWithType: AppCommandOneParameter.rawParam
+  fullName: BOOSEapplication.AppCommandOneParameter.rawParam
 - uid: BOOSEapplication.AppCommandOneParameter.Program
   commentId: F:BOOSEapplication.AppCommandOneParameter.Program
   parent: BOOSEapplication.AppCommandOneParameter
-  isExternal: true
   href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Program
   name: Program
   nameWithType: AppCommandOneParameter.Program
   fullName: BOOSEapplication.AppCommandOneParameter.Program
-- uid: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
-  commentId: M:BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
-  parent: BOOSEapplication.AppCommandOneParameter
-  isExternal: true
-  href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Set_BOOSE_StoredProgram_System_String_
-  name: Set(StoredProgram, string)
-  nameWithType: AppCommandOneParameter.Set(StoredProgram, string)
-  fullName: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram, string)
-  nameWithType.vb: AppCommandOneParameter.Set(StoredProgram, String)
-  fullName.vb: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram, String)
-  name.vb: Set(StoredProgram, String)
-  spec.csharp:
-  - uid: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
-    name: Set
-    isExternal: true
-    href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Set_BOOSE_StoredProgram_System_String_
-  - name: (
-  - uid: BOOSE.StoredProgram
-    name: StoredProgram
-    isExternal: true
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-  spec.vb:
-  - uid: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
-    name: Set
-    isExternal: true
-    href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Set_BOOSE_StoredProgram_System_String_
-  - name: (
-  - uid: BOOSE.StoredProgram
-    name: StoredProgram
-    isExternal: true
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
 - uid: BOOSEapplication.AppCommandOneParameter.CheckParameters(System.String[])
   commentId: M:BOOSEapplication.AppCommandOneParameter.CheckParameters(System.String[])
   parent: BOOSEapplication.AppCommandOneParameter
@@ -223,7 +212,6 @@ references:
   spec.csharp:
   - uid: BOOSEapplication.AppCommandOneParameter.CheckParameters(System.String[])
     name: CheckParameters
-    isExternal: true
     href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_CheckParameters_System_String___
   - name: (
   - uid: System.String
@@ -236,7 +224,6 @@ references:
   spec.vb:
   - uid: BOOSEapplication.AppCommandOneParameter.CheckParameters(System.String[])
     name: CheckParameters
-    isExternal: true
     href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_CheckParameters_System_String___
   - name: (
   - uid: System.String
@@ -245,78 +232,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
   - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
@@ -396,6 +311,78 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
@@ -441,28 +428,28 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
   spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
+  - uid: System.Object.ToString
+    name: ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
   spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
+  - uid: System.Object.ToString
+    name: ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
 - uid: System
@@ -478,10 +465,74 @@ references:
   name: BOOSE
   nameWithType: BOOSE
   fullName: BOOSE
+- uid: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
+  parent: BOOSEapplication.AppCommandOneParameter
+  isExternal: true
+  href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Set_BOOSE_StoredProgram_System_String_
+  name: Set(StoredProgram, string)
+  nameWithType: AppCommandOneParameter.Set(StoredProgram, string)
+  fullName: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram, string)
+  nameWithType.vb: AppCommandOneParameter.Set(StoredProgram, String)
+  fullName.vb: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
+  spec.csharp:
+  - uid: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Set_BOOSE_StoredProgram_System_String_
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Set_BOOSE_StoredProgram_System_String_
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSEapplication.Circle.Set*
+  commentId: Overload:BOOSEapplication.Circle.Set
+  href: BOOSEapplication.Circle.html#BOOSEapplication_Circle_Set_BOOSE_StoredProgram_System_String_
+  name: Set
+  nameWithType: Circle.Set
+  fullName: BOOSEapplication.Circle.Set
+- uid: BOOSE.StoredProgram
+  commentId: T:BOOSE.StoredProgram
+  parent: BOOSE
+  isExternal: true
+  name: StoredProgram
+  nameWithType: StoredProgram
+  fullName: BOOSE.StoredProgram
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: BOOSEapplication.AppCommandOneParameter.Compile
   commentId: M:BOOSEapplication.AppCommandOneParameter.Compile
   parent: BOOSEapplication.AppCommandOneParameter
-  isExternal: true
   href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Compile
   name: Compile()
   nameWithType: AppCommandOneParameter.Compile()
@@ -489,20 +540,17 @@ references:
   spec.csharp:
   - uid: BOOSEapplication.AppCommandOneParameter.Compile
     name: Compile
-    isExternal: true
     href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Compile
   - name: (
   - name: )
   spec.vb:
   - uid: BOOSEapplication.AppCommandOneParameter.Compile
     name: Compile
-    isExternal: true
     href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Compile
   - name: (
   - name: )
 - uid: BOOSEapplication.Circle.Compile*
   commentId: Overload:BOOSEapplication.Circle.Compile
-  isExternal: true
   href: BOOSEapplication.Circle.html#BOOSEapplication_Circle_Compile
   name: Compile
   nameWithType: Circle.Compile
@@ -510,7 +558,6 @@ references:
 - uid: BOOSEapplication.AppCommandOneParameter.Execute
   commentId: M:BOOSEapplication.AppCommandOneParameter.Execute
   parent: BOOSEapplication.AppCommandOneParameter
-  isExternal: true
   href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Execute
   name: Execute()
   nameWithType: AppCommandOneParameter.Execute()
@@ -518,31 +565,18 @@ references:
   spec.csharp:
   - uid: BOOSEapplication.AppCommandOneParameter.Execute
     name: Execute
-    isExternal: true
     href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Execute
   - name: (
   - name: )
   spec.vb:
   - uid: BOOSEapplication.AppCommandOneParameter.Execute
     name: Execute
-    isExternal: true
     href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Execute
   - name: (
   - name: )
 - uid: BOOSEapplication.Circle.Execute*
   commentId: Overload:BOOSEapplication.Circle.Execute
-  isExternal: true
   href: BOOSEapplication.Circle.html#BOOSEapplication_Circle_Execute
   name: Execute
   nameWithType: Circle.Execute
   fullName: BOOSEapplication.Circle.Execute
-- uid: BOOSEapplication.Circle.#ctor*
-  commentId: Overload:BOOSEapplication.Circle.#ctor
-  isExternal: true
-  href: BOOSEapplication.Circle.html#BOOSEapplication_Circle__ctor
-  name: Circle
-  nameWithType: Circle.Circle
-  fullName: BOOSEapplication.Circle.Circle
-  nameWithType.vb: Circle.New
-  fullName.vb: BOOSEapplication.Circle.New
-  name.vb: New

@@ -1,0 +1,480 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapplication.Tests.AppEndTests
+  commentId: T:BOOSEapplication.Tests.AppEndTests
+  id: AppEndTests
+  parent: BOOSEapplication.Tests
+  children:
+  - BOOSEapplication.Tests.AppEndTests.EndFor_DoesNotJump_WhenConditionFalse
+  - BOOSEapplication.Tests.AppEndTests.EndIf_DoesNotJump
+  - BOOSEapplication.Tests.AppEndTests.EndMethod_DoesNothing
+  - BOOSEapplication.Tests.AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse
+  langs:
+  - csharp
+  - vb
+  name: AppEndTests
+  nameWithType: AppEndTests
+  fullName: BOOSEapplication.Tests.AppEndTests
+  type: Class
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppEndTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: AppEndTests
+    path: ../BOOSEapplication.Tests/AppEndTests.cs
+    startLine: 11
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  syntax:
+    content: >-
+      [TestClass]
+
+      public class AppEndTests
+    content.vb: >-
+      <TestClass>
+
+      Public Class AppEndTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppEndTests.EndIf_DoesNotJump
+  commentId: M:BOOSEapplication.Tests.AppEndTests.EndIf_DoesNotJump
+  id: EndIf_DoesNotJump
+  parent: BOOSEapplication.Tests.AppEndTests
+  langs:
+  - csharp
+  - vb
+  name: EndIf_DoesNotJump()
+  nameWithType: AppEndTests.EndIf_DoesNotJump()
+  fullName: BOOSEapplication.Tests.AppEndTests.EndIf_DoesNotJump()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppEndTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: EndIf_DoesNotJump
+    path: ../BOOSEapplication.Tests/AppEndTests.cs
+    startLine: 34
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void EndIf_DoesNotJump()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub EndIf_DoesNotJump()
+  overload: BOOSEapplication.Tests.AppEndTests.EndIf_DoesNotJump*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse
+  commentId: M:BOOSEapplication.Tests.AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse
+  id: EndWhile_DoesNotJump_WhenConditionFalse
+  parent: BOOSEapplication.Tests.AppEndTests
+  langs:
+  - csharp
+  - vb
+  name: EndWhile_DoesNotJump_WhenConditionFalse()
+  nameWithType: AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse()
+  fullName: BOOSEapplication.Tests.AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppEndTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: EndWhile_DoesNotJump_WhenConditionFalse
+    path: ../BOOSEapplication.Tests/AppEndTests.cs
+    startLine: 49
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void EndWhile_DoesNotJump_WhenConditionFalse()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub EndWhile_DoesNotJump_WhenConditionFalse()
+  overload: BOOSEapplication.Tests.AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppEndTests.EndFor_DoesNotJump_WhenConditionFalse
+  commentId: M:BOOSEapplication.Tests.AppEndTests.EndFor_DoesNotJump_WhenConditionFalse
+  id: EndFor_DoesNotJump_WhenConditionFalse
+  parent: BOOSEapplication.Tests.AppEndTests
+  langs:
+  - csharp
+  - vb
+  name: EndFor_DoesNotJump_WhenConditionFalse()
+  nameWithType: AppEndTests.EndFor_DoesNotJump_WhenConditionFalse()
+  fullName: BOOSEapplication.Tests.AppEndTests.EndFor_DoesNotJump_WhenConditionFalse()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppEndTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: EndFor_DoesNotJump_WhenConditionFalse
+    path: ../BOOSEapplication.Tests/AppEndTests.cs
+    startLine: 76
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void EndFor_DoesNotJump_WhenConditionFalse()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub EndFor_DoesNotJump_WhenConditionFalse()
+  overload: BOOSEapplication.Tests.AppEndTests.EndFor_DoesNotJump_WhenConditionFalse*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppEndTests.EndMethod_DoesNothing
+  commentId: M:BOOSEapplication.Tests.AppEndTests.EndMethod_DoesNothing
+  id: EndMethod_DoesNothing
+  parent: BOOSEapplication.Tests.AppEndTests
+  langs:
+  - csharp
+  - vb
+  name: EndMethod_DoesNothing()
+  nameWithType: AppEndTests.EndMethod_DoesNothing()
+  fullName: BOOSEapplication.Tests.AppEndTests.EndMethod_DoesNothing()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppEndTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: EndMethod_DoesNothing
+    path: ../BOOSEapplication.Tests/AppEndTests.cs
+    startLine: 97
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void EndMethod_DoesNothing()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub EndMethod_DoesNothing()
+  overload: BOOSEapplication.Tests.AppEndTests.EndMethod_DoesNothing*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+references:
+- uid: BOOSEapplication.Tests
+  commentId: N:BOOSEapplication.Tests
+  href: BOOSEapplication.html
+  name: BOOSEapplication.Tests
+  nameWithType: BOOSEapplication.Tests
+  fullName: BOOSEapplication.Tests
+  spec.csharp:
+  - uid: BOOSEapplication
+    name: BOOSEapplication
+    href: BOOSEapplication.html
+  - name: .
+  - uid: BOOSEapplication.Tests
+    name: Tests
+    href: BOOSEapplication.Tests.html
+  spec.vb:
+  - uid: BOOSEapplication
+    name: BOOSEapplication
+    href: BOOSEapplication.html
+  - name: .
+  - uid: BOOSEapplication.Tests
+    name: Tests
+    href: BOOSEapplication.Tests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSEapplication.Tests.AppEndTests.EndIf_DoesNotJump*
+  commentId: Overload:BOOSEapplication.Tests.AppEndTests.EndIf_DoesNotJump
+  href: BOOSEapplication.Tests.AppEndTests.html#BOOSEapplication_Tests_AppEndTests_EndIf_DoesNotJump
+  name: EndIf_DoesNotJump
+  nameWithType: AppEndTests.EndIf_DoesNotJump
+  fullName: BOOSEapplication.Tests.AppEndTests.EndIf_DoesNotJump
+- uid: BOOSEapplication.Tests.AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse*
+  commentId: Overload:BOOSEapplication.Tests.AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse
+  href: BOOSEapplication.Tests.AppEndTests.html#BOOSEapplication_Tests_AppEndTests_EndWhile_DoesNotJump_WhenConditionFalse
+  name: EndWhile_DoesNotJump_WhenConditionFalse
+  nameWithType: AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse
+  fullName: BOOSEapplication.Tests.AppEndTests.EndWhile_DoesNotJump_WhenConditionFalse
+- uid: BOOSEapplication.Tests.AppEndTests.EndFor_DoesNotJump_WhenConditionFalse*
+  commentId: Overload:BOOSEapplication.Tests.AppEndTests.EndFor_DoesNotJump_WhenConditionFalse
+  href: BOOSEapplication.Tests.AppEndTests.html#BOOSEapplication_Tests_AppEndTests_EndFor_DoesNotJump_WhenConditionFalse
+  name: EndFor_DoesNotJump_WhenConditionFalse
+  nameWithType: AppEndTests.EndFor_DoesNotJump_WhenConditionFalse
+  fullName: BOOSEapplication.Tests.AppEndTests.EndFor_DoesNotJump_WhenConditionFalse
+- uid: BOOSEapplication.Tests.AppEndTests.EndMethod_DoesNothing*
+  commentId: Overload:BOOSEapplication.Tests.AppEndTests.EndMethod_DoesNothing
+  href: BOOSEapplication.Tests.AppEndTests.html#BOOSEapplication_Tests_AppEndTests_EndMethod_DoesNothing
+  name: EndMethod_DoesNothing
+  nameWithType: AppEndTests.EndMethod_DoesNothing
+  fullName: BOOSEapplication.Tests.AppEndTests.EndMethod_DoesNothing

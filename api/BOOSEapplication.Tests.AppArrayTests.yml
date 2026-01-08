@@ -1,0 +1,805 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapplication.Tests.AppArrayTests
+  commentId: T:BOOSEapplication.Tests.AppArrayTests
+  id: AppArrayTests
+  parent: BOOSEapplication.Tests
+  children:
+  - BOOSEapplication.Tests.AppArrayTests.Compile_CreatesIntArray
+  - BOOSEapplication.Tests.AppArrayTests.Compile_CreatesRealArray
+  - BOOSEapplication.Tests.AppArrayTests.Compile_ThrowsException_ForUnsupportedType
+  - BOOSEapplication.Tests.AppArrayTests.GetInt_ThrowsException_WhenOutOfRange
+  - BOOSEapplication.Tests.AppArrayTests.IntArray_SetAndGetValue
+  - BOOSEapplication.Tests.AppArrayTests.RealArray_SetAndGetValue
+  - BOOSEapplication.Tests.AppArrayTests.SetReal_ThrowsException_WhenOutOfRange
+  - BOOSEapplication.Tests.AppArrayTests.Set_ParsesIntArrayDeclaration
+  - BOOSEapplication.Tests.AppArrayTests.Set_ParsesRealArrayTwoDimensions
+  - BOOSEapplication.Tests.AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid
+  langs:
+  - csharp
+  - vb
+  name: AppArrayTests
+  nameWithType: AppArrayTests
+  fullName: BOOSEapplication.Tests.AppArrayTests
+  type: Class
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: AppArrayTests
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 14
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: >-
+    Unit tests for the <xref href="BOOSEapplication.AppArray" data-throw-if-not-resolved="false"></xref> class.
+
+    Ensures correct parsing, allocation, and value access for int and real arrays.
+  example: []
+  syntax:
+    content: >-
+      [TestClass]
+
+      public class AppArrayTests
+    content.vb: >-
+      <TestClass>
+
+      Public Class AppArrayTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppArrayTests.Set_ParsesIntArrayDeclaration
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.Set_ParsesIntArrayDeclaration
+  id: Set_ParsesIntArrayDeclaration
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: Set_ParsesIntArrayDeclaration()
+  nameWithType: AppArrayTests.Set_ParsesIntArrayDeclaration()
+  fullName: BOOSEapplication.Tests.AppArrayTests.Set_ParsesIntArrayDeclaration()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Set_ParsesIntArrayDeclaration
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 35
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that Set() correctly parses an integer array declaration.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Set_ParsesIntArrayDeclaration()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Set_ParsesIntArrayDeclaration()
+  overload: BOOSEapplication.Tests.AppArrayTests.Set_ParsesIntArrayDeclaration*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppArrayTests.Set_ParsesRealArrayTwoDimensions
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.Set_ParsesRealArrayTwoDimensions
+  id: Set_ParsesRealArrayTwoDimensions
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: Set_ParsesRealArrayTwoDimensions()
+  nameWithType: AppArrayTests.Set_ParsesRealArrayTwoDimensions()
+  fullName: BOOSEapplication.Tests.AppArrayTests.Set_ParsesRealArrayTwoDimensions()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Set_ParsesRealArrayTwoDimensions
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 51
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that Set() correctly parses a real array with two dimensions.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Set_ParsesRealArrayTwoDimensions()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Set_ParsesRealArrayTwoDimensions()
+  overload: BOOSEapplication.Tests.AppArrayTests.Set_ParsesRealArrayTwoDimensions*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid
+  id: Set_ThrowsException_WhenDeclarationInvalid
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: Set_ThrowsException_WhenDeclarationInvalid()
+  nameWithType: AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid()
+  fullName: BOOSEapplication.Tests.AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Set_ThrowsException_WhenDeclarationInvalid
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 67
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures Set() throws a CommandException when the declaration is incomplete.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      [ExpectedException(typeof(CommandException))]
+
+      public void Set_ThrowsException_WhenDeclarationInvalid()
+    content.vb: >-
+      <TestMethod>
+
+      <ExpectedException(GetType(CommandException))>
+
+      Public Sub Set_ThrowsException_WhenDeclarationInvalid()
+  overload: BOOSEapplication.Tests.AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: BOOSE.CommandException
+- uid: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesIntArray
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.Compile_CreatesIntArray
+  id: Compile_CreatesIntArray
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: Compile_CreatesIntArray()
+  nameWithType: AppArrayTests.Compile_CreatesIntArray()
+  fullName: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesIntArray()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Compile_CreatesIntArray
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 79
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that Compile() allocates an integer array correctly.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Compile_CreatesIntArray()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Compile_CreatesIntArray()
+  overload: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesIntArray*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesRealArray
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.Compile_CreatesRealArray
+  id: Compile_CreatesRealArray
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: Compile_CreatesRealArray()
+  nameWithType: AppArrayTests.Compile_CreatesRealArray()
+  fullName: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesRealArray()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Compile_CreatesRealArray
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 95
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that Compile() allocates a real array correctly.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Compile_CreatesRealArray()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Compile_CreatesRealArray()
+  overload: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesRealArray*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppArrayTests.Compile_ThrowsException_ForUnsupportedType
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.Compile_ThrowsException_ForUnsupportedType
+  id: Compile_ThrowsException_ForUnsupportedType
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: Compile_ThrowsException_ForUnsupportedType()
+  nameWithType: AppArrayTests.Compile_ThrowsException_ForUnsupportedType()
+  fullName: BOOSEapplication.Tests.AppArrayTests.Compile_ThrowsException_ForUnsupportedType()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Compile_ThrowsException_ForUnsupportedType
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 111
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures Compile() throws an exception for unsupported array types.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      [ExpectedException(typeof(CommandException))]
+
+      public void Compile_ThrowsException_ForUnsupportedType()
+    content.vb: >-
+      <TestMethod>
+
+      <ExpectedException(GetType(CommandException))>
+
+      Public Sub Compile_ThrowsException_ForUnsupportedType()
+  overload: BOOSEapplication.Tests.AppArrayTests.Compile_ThrowsException_ForUnsupportedType*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: BOOSE.CommandException
+- uid: BOOSEapplication.Tests.AppArrayTests.IntArray_SetAndGetValue
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.IntArray_SetAndGetValue
+  id: IntArray_SetAndGetValue
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: IntArray_SetAndGetValue()
+  nameWithType: AppArrayTests.IntArray_SetAndGetValue()
+  fullName: BOOSEapplication.Tests.AppArrayTests.IntArray_SetAndGetValue()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: IntArray_SetAndGetValue
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 124
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that SetInt() and GetInt() correctly store and retrieve values.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void IntArray_SetAndGetValue()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub IntArray_SetAndGetValue()
+  overload: BOOSEapplication.Tests.AppArrayTests.IntArray_SetAndGetValue*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppArrayTests.RealArray_SetAndGetValue
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.RealArray_SetAndGetValue
+  id: RealArray_SetAndGetValue
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: RealArray_SetAndGetValue()
+  nameWithType: AppArrayTests.RealArray_SetAndGetValue()
+  fullName: BOOSEapplication.Tests.AppArrayTests.RealArray_SetAndGetValue()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: RealArray_SetAndGetValue
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 141
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that SetReal() and GetReal() correctly store and retrieve values.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void RealArray_SetAndGetValue()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub RealArray_SetAndGetValue()
+  overload: BOOSEapplication.Tests.AppArrayTests.RealArray_SetAndGetValue*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppArrayTests.GetInt_ThrowsException_WhenOutOfRange
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.GetInt_ThrowsException_WhenOutOfRange
+  id: GetInt_ThrowsException_WhenOutOfRange
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: GetInt_ThrowsException_WhenOutOfRange()
+  nameWithType: AppArrayTests.GetInt_ThrowsException_WhenOutOfRange()
+  fullName: BOOSEapplication.Tests.AppArrayTests.GetInt_ThrowsException_WhenOutOfRange()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: GetInt_ThrowsException_WhenOutOfRange
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 158
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that accessing an out-of-range index throws a CommandException.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      [ExpectedException(typeof(CommandException))]
+
+      public void GetInt_ThrowsException_WhenOutOfRange()
+    content.vb: >-
+      <TestMethod>
+
+      <ExpectedException(GetType(CommandException))>
+
+      Public Sub GetInt_ThrowsException_WhenOutOfRange()
+  overload: BOOSEapplication.Tests.AppArrayTests.GetInt_ThrowsException_WhenOutOfRange*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: BOOSE.CommandException
+- uid: BOOSEapplication.Tests.AppArrayTests.SetReal_ThrowsException_WhenOutOfRange
+  commentId: M:BOOSEapplication.Tests.AppArrayTests.SetReal_ThrowsException_WhenOutOfRange
+  id: SetReal_ThrowsException_WhenOutOfRange
+  parent: BOOSEapplication.Tests.AppArrayTests
+  langs:
+  - csharp
+  - vb
+  name: SetReal_ThrowsException_WhenOutOfRange()
+  nameWithType: AppArrayTests.SetReal_ThrowsException_WhenOutOfRange()
+  fullName: BOOSEapplication.Tests.AppArrayTests.SetReal_ThrowsException_WhenOutOfRange()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppArrayTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: SetReal_ThrowsException_WhenOutOfRange
+    path: ../BOOSEapplication.Tests/AppArrayTests.cs
+    startLine: 173
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that writing to an out-of-range index throws a CommandException.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      [ExpectedException(typeof(CommandException))]
+
+      public void SetReal_ThrowsException_WhenOutOfRange()
+    content.vb: >-
+      <TestMethod>
+
+      <ExpectedException(GetType(CommandException))>
+
+      Public Sub SetReal_ThrowsException_WhenOutOfRange()
+  overload: BOOSEapplication.Tests.AppArrayTests.SetReal_ThrowsException_WhenOutOfRange*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: BOOSE.CommandException
+references:
+- uid: BOOSEapplication.AppArray
+  commentId: T:BOOSEapplication.AppArray
+  href: BOOSEapplication.AppArray.html
+  name: AppArray
+  nameWithType: AppArray
+  fullName: BOOSEapplication.AppArray
+- uid: BOOSEapplication.Tests
+  commentId: N:BOOSEapplication.Tests
+  href: BOOSEapplication.html
+  name: BOOSEapplication.Tests
+  nameWithType: BOOSEapplication.Tests
+  fullName: BOOSEapplication.Tests
+  spec.csharp:
+  - uid: BOOSEapplication
+    name: BOOSEapplication
+    href: BOOSEapplication.html
+  - name: .
+  - uid: BOOSEapplication.Tests
+    name: Tests
+    href: BOOSEapplication.Tests.html
+  spec.vb:
+  - uid: BOOSEapplication
+    name: BOOSEapplication
+    href: BOOSEapplication.html
+  - name: .
+  - uid: BOOSEapplication.Tests
+    name: Tests
+    href: BOOSEapplication.Tests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSEapplication.Tests.AppArrayTests.Set_ParsesIntArrayDeclaration*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.Set_ParsesIntArrayDeclaration
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_Set_ParsesIntArrayDeclaration
+  name: Set_ParsesIntArrayDeclaration
+  nameWithType: AppArrayTests.Set_ParsesIntArrayDeclaration
+  fullName: BOOSEapplication.Tests.AppArrayTests.Set_ParsesIntArrayDeclaration
+- uid: BOOSEapplication.Tests.AppArrayTests.Set_ParsesRealArrayTwoDimensions*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.Set_ParsesRealArrayTwoDimensions
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_Set_ParsesRealArrayTwoDimensions
+  name: Set_ParsesRealArrayTwoDimensions
+  nameWithType: AppArrayTests.Set_ParsesRealArrayTwoDimensions
+  fullName: BOOSEapplication.Tests.AppArrayTests.Set_ParsesRealArrayTwoDimensions
+- uid: BOOSEapplication.Tests.AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_Set_ThrowsException_WhenDeclarationInvalid
+  name: Set_ThrowsException_WhenDeclarationInvalid
+  nameWithType: AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid
+  fullName: BOOSEapplication.Tests.AppArrayTests.Set_ThrowsException_WhenDeclarationInvalid
+- uid: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesIntArray*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.Compile_CreatesIntArray
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_Compile_CreatesIntArray
+  name: Compile_CreatesIntArray
+  nameWithType: AppArrayTests.Compile_CreatesIntArray
+  fullName: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesIntArray
+- uid: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesRealArray*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.Compile_CreatesRealArray
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_Compile_CreatesRealArray
+  name: Compile_CreatesRealArray
+  nameWithType: AppArrayTests.Compile_CreatesRealArray
+  fullName: BOOSEapplication.Tests.AppArrayTests.Compile_CreatesRealArray
+- uid: BOOSEapplication.Tests.AppArrayTests.Compile_ThrowsException_ForUnsupportedType*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.Compile_ThrowsException_ForUnsupportedType
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_Compile_ThrowsException_ForUnsupportedType
+  name: Compile_ThrowsException_ForUnsupportedType
+  nameWithType: AppArrayTests.Compile_ThrowsException_ForUnsupportedType
+  fullName: BOOSEapplication.Tests.AppArrayTests.Compile_ThrowsException_ForUnsupportedType
+- uid: BOOSEapplication.Tests.AppArrayTests.IntArray_SetAndGetValue*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.IntArray_SetAndGetValue
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_IntArray_SetAndGetValue
+  name: IntArray_SetAndGetValue
+  nameWithType: AppArrayTests.IntArray_SetAndGetValue
+  fullName: BOOSEapplication.Tests.AppArrayTests.IntArray_SetAndGetValue
+- uid: BOOSEapplication.Tests.AppArrayTests.RealArray_SetAndGetValue*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.RealArray_SetAndGetValue
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_RealArray_SetAndGetValue
+  name: RealArray_SetAndGetValue
+  nameWithType: AppArrayTests.RealArray_SetAndGetValue
+  fullName: BOOSEapplication.Tests.AppArrayTests.RealArray_SetAndGetValue
+- uid: BOOSEapplication.Tests.AppArrayTests.GetInt_ThrowsException_WhenOutOfRange*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.GetInt_ThrowsException_WhenOutOfRange
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_GetInt_ThrowsException_WhenOutOfRange
+  name: GetInt_ThrowsException_WhenOutOfRange
+  nameWithType: AppArrayTests.GetInt_ThrowsException_WhenOutOfRange
+  fullName: BOOSEapplication.Tests.AppArrayTests.GetInt_ThrowsException_WhenOutOfRange
+- uid: BOOSEapplication.Tests.AppArrayTests.SetReal_ThrowsException_WhenOutOfRange*
+  commentId: Overload:BOOSEapplication.Tests.AppArrayTests.SetReal_ThrowsException_WhenOutOfRange
+  href: BOOSEapplication.Tests.AppArrayTests.html#BOOSEapplication_Tests_AppArrayTests_SetReal_ThrowsException_WhenOutOfRange
+  name: SetReal_ThrowsException_WhenOutOfRange
+  nameWithType: AppArrayTests.SetReal_ThrowsException_WhenOutOfRange
+  fullName: BOOSEapplication.Tests.AppArrayTests.SetReal_ThrowsException_WhenOutOfRange

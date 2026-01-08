@@ -4,17 +4,36 @@ items:
   commentId: N:BOOSEapplication
   id: BOOSEapplication
   children:
+  - BOOSEapplication.AppArray
+  - BOOSEapplication.AppAssign
+  - BOOSEapplication.AppCall
   - BOOSEapplication.AppCanvas
+  - BOOSEapplication.AppCommand
   - BOOSEapplication.AppCommandFactory
   - BOOSEapplication.AppCommandOneParameter
   - BOOSEapplication.AppCommandTwoParameters
+  - BOOSEapplication.AppEnd
+  - BOOSEapplication.AppEvaluation
+  - BOOSEapplication.AppFor
+  - BOOSEapplication.AppIf
+  - BOOSEapplication.AppInt
+  - BOOSEapplication.AppMethod
   - BOOSEapplication.AppParser
+  - BOOSEapplication.AppPeek
+  - BOOSEapplication.AppPoke
+  - BOOSEapplication.AppReal
   - BOOSEapplication.AppStoredProgram
+  - BOOSEapplication.AppWhile
+  - BOOSEapplication.AppWrite
+  - BOOSEapplication.CallFrame
   - BOOSEapplication.Circle
   - BOOSEapplication.DrawToCommand
+  - BOOSEapplication.ErrorReport
   - BOOSEapplication.MoveToCommand
+  - BOOSEapplication.NullCommand
   - BOOSEapplication.PenCommand
   - BOOSEapplication.Rect
+  - BOOSEapplication.booseInterface
   langs:
   - csharp
   - vb
@@ -23,19 +42,41 @@ items:
   fullName: BOOSEapplication
   type: Namespace
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
 references:
+- uid: BOOSEapplication.AppArray
+  commentId: T:BOOSEapplication.AppArray
+  href: BOOSEapplication.AppArray.html
+  name: AppArray
+  nameWithType: AppArray
+  fullName: BOOSEapplication.AppArray
+- uid: BOOSEapplication.AppAssign
+  commentId: T:BOOSEapplication.AppAssign
+  href: BOOSEapplication.AppAssign.html
+  name: AppAssign
+  nameWithType: AppAssign
+  fullName: BOOSEapplication.AppAssign
+- uid: BOOSEapplication.AppCall
+  commentId: T:BOOSEapplication.AppCall
+  href: BOOSEapplication.AppCall.html
+  name: AppCall
+  nameWithType: AppCall
+  fullName: BOOSEapplication.AppCall
 - uid: BOOSEapplication.AppCanvas
   commentId: T:BOOSEapplication.AppCanvas
   parent: BOOSEapplication
-  isExternal: true
   href: BOOSEapplication.AppCanvas.html
   name: AppCanvas
   nameWithType: AppCanvas
   fullName: BOOSEapplication.AppCanvas
+- uid: BOOSEapplication.AppCommand
+  commentId: T:BOOSEapplication.AppCommand
+  href: BOOSEapplication.AppCommand.html
+  name: AppCommand
+  nameWithType: AppCommand
+  fullName: BOOSEapplication.AppCommand
 - uid: BOOSEapplication.AppCommandFactory
   commentId: T:BOOSEapplication.AppCommandFactory
-  isExternal: true
   href: BOOSEapplication.AppCommandFactory.html
   name: AppCommandFactory
   nameWithType: AppCommandFactory
@@ -43,7 +84,6 @@ references:
 - uid: BOOSEapplication.AppCommandOneParameter
   commentId: T:BOOSEapplication.AppCommandOneParameter
   parent: BOOSEapplication
-  isExternal: true
   href: BOOSEapplication.AppCommandOneParameter.html
   name: AppCommandOneParameter
   nameWithType: AppCommandOneParameter
@@ -51,63 +91,146 @@ references:
 - uid: BOOSEapplication.AppCommandTwoParameters
   commentId: T:BOOSEapplication.AppCommandTwoParameters
   parent: BOOSEapplication
-  isExternal: true
   href: BOOSEapplication.AppCommandTwoParameters.html
   name: AppCommandTwoParameters
   nameWithType: AppCommandTwoParameters
   fullName: BOOSEapplication.AppCommandTwoParameters
+- uid: BOOSEapplication.AppEnd
+  commentId: T:BOOSEapplication.AppEnd
+  href: BOOSEapplication.AppEnd.html
+  name: AppEnd
+  nameWithType: AppEnd
+  fullName: BOOSEapplication.AppEnd
+- uid: BOOSEapplication.AppEvaluation
+  commentId: T:BOOSEapplication.AppEvaluation
+  parent: BOOSEapplication
+  href: BOOSEapplication.AppEvaluation.html
+  name: AppEvaluation
+  nameWithType: AppEvaluation
+  fullName: BOOSEapplication.AppEvaluation
+- uid: BOOSEapplication.AppFor
+  commentId: T:BOOSEapplication.AppFor
+  href: BOOSEapplication.AppFor.html
+  name: AppFor
+  nameWithType: AppFor
+  fullName: BOOSEapplication.AppFor
+- uid: BOOSEapplication.AppIf
+  commentId: T:BOOSEapplication.AppIf
+  href: BOOSEapplication.AppIf.html
+  name: AppIf
+  nameWithType: AppIf
+  fullName: BOOSEapplication.AppIf
+- uid: BOOSEapplication.AppInt
+  commentId: T:BOOSEapplication.AppInt
+  href: BOOSEapplication.AppInt.html
+  name: AppInt
+  nameWithType: AppInt
+  fullName: BOOSEapplication.AppInt
+- uid: BOOSEapplication.AppMethod
+  commentId: T:BOOSEapplication.AppMethod
+  parent: BOOSEapplication
+  href: BOOSEapplication.AppMethod.html
+  name: AppMethod
+  nameWithType: AppMethod
+  fullName: BOOSEapplication.AppMethod
 - uid: BOOSEapplication.AppParser
   commentId: T:BOOSEapplication.AppParser
-  isExternal: true
   href: BOOSEapplication.AppParser.html
   name: AppParser
   nameWithType: AppParser
   fullName: BOOSEapplication.AppParser
+- uid: BOOSEapplication.AppPeek
+  commentId: T:BOOSEapplication.AppPeek
+  href: BOOSEapplication.AppPeek.html
+  name: AppPeek
+  nameWithType: AppPeek
+  fullName: BOOSEapplication.AppPeek
+- uid: BOOSEapplication.AppPoke
+  commentId: T:BOOSEapplication.AppPoke
+  href: BOOSEapplication.AppPoke.html
+  name: AppPoke
+  nameWithType: AppPoke
+  fullName: BOOSEapplication.AppPoke
+- uid: BOOSEapplication.AppReal
+  commentId: T:BOOSEapplication.AppReal
+  href: BOOSEapplication.AppReal.html
+  name: AppReal
+  nameWithType: AppReal
+  fullName: BOOSEapplication.AppReal
 - uid: BOOSEapplication.AppStoredProgram
   commentId: T:BOOSEapplication.AppStoredProgram
-  isExternal: true
   href: BOOSEapplication.AppStoredProgram.html
   name: AppStoredProgram
   nameWithType: AppStoredProgram
   fullName: BOOSEapplication.AppStoredProgram
+- uid: BOOSEapplication.AppWhile
+  commentId: T:BOOSEapplication.AppWhile
+  href: BOOSEapplication.AppWhile.html
+  name: AppWhile
+  nameWithType: AppWhile
+  fullName: BOOSEapplication.AppWhile
+- uid: BOOSEapplication.AppWrite
+  commentId: T:BOOSEapplication.AppWrite
+  href: BOOSEapplication.AppWrite.html
+  name: AppWrite
+  nameWithType: AppWrite
+  fullName: BOOSEapplication.AppWrite
+- uid: BOOSEapplication.booseInterface
+  commentId: T:BOOSEapplication.booseInterface
+  href: BOOSEapplication.booseInterface.html
+  name: booseInterface
+  nameWithType: booseInterface
+  fullName: BOOSEapplication.booseInterface
+- uid: BOOSEapplication.CallFrame
+  commentId: T:BOOSEapplication.CallFrame
+  href: BOOSEapplication.CallFrame.html
+  name: CallFrame
+  nameWithType: CallFrame
+  fullName: BOOSEapplication.CallFrame
 - uid: BOOSEapplication.Circle
   commentId: T:BOOSEapplication.Circle
-  isExternal: true
   href: BOOSEapplication.Circle.html
   name: Circle
   nameWithType: Circle
   fullName: BOOSEapplication.Circle
 - uid: BOOSEapplication.DrawToCommand
   commentId: T:BOOSEapplication.DrawToCommand
-  isExternal: true
   href: BOOSEapplication.DrawToCommand.html
   name: DrawToCommand
   nameWithType: DrawToCommand
   fullName: BOOSEapplication.DrawToCommand
+- uid: BOOSEapplication.ErrorReport
+  commentId: T:BOOSEapplication.ErrorReport
+  href: BOOSEapplication.ErrorReport.html
+  name: ErrorReport
+  nameWithType: ErrorReport
+  fullName: BOOSEapplication.ErrorReport
 - uid: BOOSEapplication.MoveToCommand
   commentId: T:BOOSEapplication.MoveToCommand
-  isExternal: true
   href: BOOSEapplication.MoveToCommand.html
   name: MoveToCommand
   nameWithType: MoveToCommand
   fullName: BOOSEapplication.MoveToCommand
+- uid: BOOSEapplication.NullCommand
+  commentId: T:BOOSEapplication.NullCommand
+  href: BOOSEapplication.NullCommand.html
+  name: NullCommand
+  nameWithType: NullCommand
+  fullName: BOOSEapplication.NullCommand
 - uid: BOOSEapplication.PenCommand
   commentId: T:BOOSEapplication.PenCommand
-  isExternal: true
   href: BOOSEapplication.PenCommand.html
   name: PenCommand
   nameWithType: PenCommand
   fullName: BOOSEapplication.PenCommand
 - uid: BOOSEapplication.Rect
   commentId: T:BOOSEapplication.Rect
-  isExternal: true
   href: BOOSEapplication.Rect.html
   name: Rect
   nameWithType: Rect
   fullName: BOOSEapplication.Rect
 - uid: BOOSEapplication
   commentId: N:BOOSEapplication
-  isExternal: true
   href: BOOSEapplication.html
   name: BOOSEapplication
   nameWithType: BOOSEapplication

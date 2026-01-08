@@ -1,8 +1,11 @@
-<meta http-equiv="refresh" content="0; url=api/api/BOOSEapplication.html" />
-<p>If you are not redirected automatically, <a href="api/api/BOOSEapplication.html">click here</a>.</p>
-
 # Welcome to BOOSEapplication Documentation
 
-Explore the full API reference below:
+This is the documentation for the BOOSE application and its test suite.
 
-<a href="index.html">Go to API Reference</a>
+## Getting Started
+
+Explore the API documentation to learn about the available classes and methods.
+
+## API Reference
+
+Browse the complete API reference using the navigation menu.

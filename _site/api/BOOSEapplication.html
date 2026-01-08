@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace BOOSEapplication </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace BOOSEapplication ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BOOSEapplication">
+
+  <h1 id="BOOSEapplication" data-uid="BOOSEapplication" class="text-break">Namespace BOOSEapplication</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppArray.html">AppArray</a></dt>
+      <dd><p>Represents a two-dimensional array that can store either integer or real (double) values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppAssign.html">AppAssign</a></dt>
+      <dd><p>Represents an assignment command that evaluates an arithmetic expression
+and stores the result in a BOOSE variable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppCall.html">AppCall</a></dt>
+      <dd><p>Represents a method invocation command within the BOOSE application.</p>
+<p>
+<a class="xref" href="BOOSEapplication.AppCall.html">AppCall</a> locates a method by name, evaluates its argument
+expressions, binds them to the method's parameters, executes the method body
+inside a new call frame, and finally stores the return value in the global
+variable table.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppCanvas.html">AppCanvas</a></dt>
+      <dd><p>Provides a drawing canvas that implements BOOSE library commands, shapes, text and error rendering</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppCommand.html">AppCommand</a></dt>
+      <dd><p>Represents a command that operates on an <a class="xref" href="BOOSEapplication.AppCanvas.html">AppCanvas</a> using parsed parameters.
+Implements the <span class="xref">BOOSE.ICommand</span> interface for BOOSE command execution.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppCommandFactory.html">AppCommandFactory</a></dt>
+      <dd><p>Factory class responsible for creating command instances based on string identifiers.
+Implements the <span class="xref">BOOSE.ICommandFactory</span> interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppCommandOneParameter.html">AppCommandOneParameter</a></dt>
+      <dd><p>Abstract base class for commands that require a single parameter.
+Implements the <span class="xref">BOOSE.ICommand</span> interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppCommandTwoParameters.html">AppCommandTwoParameters</a></dt>
+      <dd><p>Abstract base class for commands that require two integer parameters
+Implements the <span class="xref">BOOSE.ICommand</span> interface from BOOSE library</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppEnd.html">AppEnd</a></dt>
+      <dd><p>Represents the terminating command for structured control blocks
+such as IF, WHILE, FOR, and METHOD within the BOOSE scripting system.</p>
+<p>
+<a class="xref" href="BOOSEapplication.AppEnd.html">AppEnd</a> is responsible for resolving block termination
+and determining whether execution should continue normally or jump
+back to the start of a loop construct.
+</p>
+<p>
+The behaviour of this command depends on the <a class="xref" href="BOOSEapplication.AppEnd.html#BOOSEapplication_AppEnd_Type">Type</a> value
+assigned during <a class="xref" href="BOOSEapplication.AppEnd.html#BOOSEapplication_AppEnd_Set_BOOSE_StoredProgram_System_String_">Set(StoredProgram, string)</a>:
+<ul><li><code>if</code> → no action; control simply exits the IF block.</li><li><code>while</code> → jumps back to the matching WHILE if the loop condition was true.</li><li><code>for</code> → jumps back to the matching FOR if the loop condition was true.</li><li><code>method</code> → no-op under the direct-call execution model.</li></ul>
+
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppEvaluation.html">AppEvaluation</a></dt>
+      <dd><p>Represents a basic evaluation node within the BOOSE execution model.</p>
+<p>
+<a class="xref" href="BOOSEapplication.AppEvaluation.html">AppEvaluation</a> provides a minimal concrete implementation of
+<span class="xref">BOOSE.Evaluation</span> and <span class="xref">BOOSE.IEvaluation</span>, suitable for use
+as a variable or placeholder evaluation object within a stored program.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppFor.html">AppFor</a></dt>
+      <dd><p>Implements the FOR loop construct for the BOOSE scripting system.</p>
+<p>
+AppFor handles loop initialization, iteration, condition checking,
+and early termination by jumping to the matching END FOR when the
+loop condition becomes false.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppIf.html">AppIf</a></dt>
+      <dd><p>Implements the IF conditional command for the BOOSE scripting system.</p>
+<p>
+AppIf evaluates a comparison expression and conditionally executes or
+skips the associated IF block. When the condition is false, control
+flow jumps to the matching ELSE or END IF command.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppInt.html">AppInt</a></dt>
+      <dd><p>Represents an integer variable within the BOOSE scripting system.</p>
+<p>
+AppInt supports literal assignment, simple multiplication expressions,
+and fallback evaluation through the BOOSE expression evaluator.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppMethod.html">AppMethod</a></dt>
+      <dd><p>Represents a user-defined method within the BOOSE scripting system.</p>
+<p>
+An <a class="xref" href="BOOSEapplication.AppMethod.html">AppMethod</a> stores metadata about the method such as its name,
+return type, return variable, parameter list, and the sequence of commands
+that form the method body.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppParser.html">AppParser</a></dt>
+      <dd><p>Parses script lines into executable BOOSE <span class="xref">BOOSE.ICommand</span> objects.</p>
+<p>
+The <a class="xref" href="BOOSEapplication.AppParser.html">AppParser</a> is responsible for:
+<ul><li>Normalizing whitespace and removing invisible characters</li><li>Detecting control-flow constructs (IF, WHILE, FOR, METHOD)</li><li>Creating commands via an <span class="xref">BOOSE.ICommandFactory</span></li><li>Assigning parameters and expressions to commands</li><li>Updating method definitions inside <a class="xref" href="BOOSEapplication.AppStoredProgram.html">AppStoredProgram</a></li></ul>
+
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppPeek.html">AppPeek</a></dt>
+      <dd><p>Implements the PEEK command, which reads a value from an array
+and assigns it to a target evaluatable variable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppPoke.html">AppPoke</a></dt>
+      <dd><p>Implements the POKE command, which writes a value into a specific
+element of an <a class="xref" href="BOOSEapplication.AppArray.html">AppArray</a> at the given row and column.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppReal.html">AppReal</a></dt>
+      <dd><p>Represents a real (double‑precision) numeric variable within the BOOSE scripting system.</p>
+<p>
+AppReal supports:
+<ul><li>Literal assignment</li><li>Multiplication expressions (e.g., <code>a * b * 3.5</code>)</li><li>Fallback evaluation using the program's expression evaluator</li><li>Resolving values from other AppReal or AppInt variables</li></ul>
+
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppStoredProgram.html">AppStoredProgram</a></dt>
+      <dd><p>Represents an application-specific stored program that extends the functionality of a base <span class="xref">BOOSE.StoredProgram</span>. This class manages a collection of commands, methods, and a call stack to support
+program execution and method invocation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppWhile.html">AppWhile</a></dt>
+      <dd><p>Implements the WHILE control‑flow command for the BOOSE scripting engine.
+A WHILE command evaluates a comparison expression and either:</p>
+<ul><li>enters the loop body if the condition is true</li><li>skips forward to the matching END WHILE if the condition is false</li></ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.AppWrite.html">AppWrite</a></dt>
+      <dd><p>Implements the WRITE command for the BOOSE scripting engine.
+This command evaluates text or numeric expressions and writes
+the resulting string to the program's canvas.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.CallFrame.html">CallFrame</a></dt>
+      <dd><p>Represents a single stack frame used during a method call in the BOOSE runtime.
+A CallFrame stores:</p>
+<ul><li>Local variables belonging to the method</li><li>The return address where execution should resume</li><li>The name of the return variable (usually the method name)</li></ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.Circle.html">Circle</a></dt>
+      <dd><p>Implements the CIRCLE command for the BOOSE scripting engine.
+This command draws a circle at the current canvas position using
+a radius that may be a literal, a variable, or an expression.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.DrawToCommand.html">DrawToCommand</a></dt>
+      <dd><p>Represents a command to draw a line to a specified point on the canvas.
+Inherits from <a class="xref" href="BOOSEapplication.AppCommandTwoParameters.html">AppCommandTwoParameters</a> to utilize two parameters for the coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.ErrorReport.html">ErrorReport</a></dt>
+      <dd><p>Gets and shows error messages on the canvas, ensuring each message is shown only once.
+Provides static properties to set the canvas and target picture box for displaying errors.
+Displays error messages using the canvas's ShowError method and invalidates the picture box to trigger a repaint.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.MoveToCommand.html">MoveToCommand</a></dt>
+      <dd><p>Represents a command to move the drawing cursor to a specified point on the canvas without drawing.
+Inherits from <a class="xref" href="BOOSEapplication.AppCommandTwoParameters.html">AppCommandTwoParameters</a> to utilize two parameters for the coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.NullCommand.html">NullCommand</a></dt>
+      <dd><p>A no‑operation command used as a safe fallback when an unknown or
+unrecognized command is encountered. This command intentionally performs
+no actions and ensures the program continues running without interruption.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.PenCommand.html">PenCommand</a></dt>
+      <dd><p>Represents a command that sets the pen colour and width for drawing on the canvas.
+Inherits from <span class="xref">BOOSE.CommandThreeParameters</span> to support three RGB parameters,
+with an optional fourth parameter for pen width.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.Rect.html">Rect</a></dt>
+      <dd><p>Represents a command that draws a rectangle on the canvas.
+The rectangle is always drawn unfilled.
+Inherits from <a class="xref" href="BOOSEapplication.AppCommandTwoParameters.html">AppCommandTwoParameters</a> to support
+two parameters representing width and height.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSEapplication.booseInterface.html">booseInterface</a></dt>
+      <dd><p>Main Windows Form for the BOOSE application.
+Allows users to draw on a canvas using BOOSE commands in the PictureBox.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

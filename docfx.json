@@ -1,49 +1,43 @@
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
   "metadata": [
     {
       "src": [
         {
-          "src": "../BOOSEapplication/bin/Debug/net8.0-windows/",
-          "files": [
-            "BOOSEapplication.Doc.dll",
-            "BOOSEapplication.Doc.xml"
-          ]
+          "files": [ "BOOSEapplication/BOOSEapplication.csproj" ],
+          "src": ".."
         },
-        { 
-          "src":"../BOOSEapplication.Tests/bin/Debug/net8.0-windows/",
-          "files": [
-            "BOOSEapplication.Tests.dll",
-            "BOOSEapplication.Tests.xml"
-          ]
+        {
+          "files": [ "BOOSEapplication.Tests/BOOSEapplication.Tests.csproj" ],
+          "src": ".."
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
     }
   ],
   "build": {
     "content": [
       {
-        "files": ["index.md"],
-        "dest": "."
+        "files": [ "api/**.yml", "api/index.md" ],
+        "exclude": [ "api/**.cs", "api/**/*.cs" ]
       },
       {
-        "files": ["api/*.yml"],
-        "dest": "api"
-      },
+        "files": [ "*.md", "toc.yml" ],
+        "exclude": [ "obj/**", "bin/**" ]
+      }
+    ],
+    "resource": [
       {
-        "files": ["api/toc.yml"],
-        "dest": "api"
+        "files": [ "images/**" ]
       }
     ],
     "output": "_site",
-    "template": ["default", "modern"],
-    "globalMetadata": {
-      "_appName": "BOOSEapplicationDocumentation",
-      "_appTitle": "BOOSEapplicationDocumentation",
-      "_enableSearch": true,
-      "pdf": true
-    }
-  },
-  "disableGitFeatures": true
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [ "default", "modern" ],
+    "postProcessors": [],
+    "keepFileLink": false,
+    "disableGitFeatures": true
+  }
 }

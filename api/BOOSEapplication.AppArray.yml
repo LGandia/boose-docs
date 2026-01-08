@@ -1,0 +1,1242 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapplication.AppArray
+  commentId: T:BOOSEapplication.AppArray
+  id: AppArray
+  parent: BOOSEapplication
+  children:
+  - BOOSEapplication.AppArray.ArrayType
+  - BOOSEapplication.AppArray.Columns
+  - BOOSEapplication.AppArray.Compile
+  - BOOSEapplication.AppArray.Execute
+  - BOOSEapplication.AppArray.GetInt(System.Int32,System.Int32)
+  - BOOSEapplication.AppArray.GetReal(System.Int32,System.Int32)
+  - BOOSEapplication.AppArray.Rows
+  - BOOSEapplication.AppArray.Set(BOOSE.StoredProgram,System.String)
+  - BOOSEapplication.AppArray.SetInt(System.Int32,System.Int32,System.Int32)
+  - BOOSEapplication.AppArray.SetReal(System.Int32,System.Int32,System.Double)
+  langs:
+  - csharp
+  - vb
+  name: AppArray
+  nameWithType: AppArray
+  fullName: BOOSEapplication.AppArray
+  type: Class
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: AppArray
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 16
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Represents a two-dimensional array that can store either integer or real (double) values.
+  remarks: >-
+    The type of the array (integer or real) is determined during initialization. The array
+        supports operations to get and set values at specific row and column indices, as well as metadata about its
+        dimensions and type. The array must be initialized and compiled before it can be used.
+  example: []
+  syntax:
+    content: 'public class AppArray : AppEvaluation, IEvaluation, ICommand'
+    content.vb: Public Class AppArray Inherits AppEvaluation Implements IEvaluation, ICommand
+  inheritance:
+  - System.Object
+  - BOOSE.Command
+  - BOOSE.Evaluation
+  - BOOSEapplication.AppEvaluation
+  implements:
+  - BOOSE.IEvaluation
+  - BOOSE.ICommand
+  inheritedMembers:
+  - BOOSE.Evaluation.expression
+  - BOOSE.Evaluation.evaluatedExpression
+  - BOOSE.Evaluation.varName
+  - BOOSE.Evaluation.value
+  - BOOSE.Evaluation.CheckParameters(System.String[])
+  - BOOSE.Evaluation.ProcessExpression(System.String)
+  - BOOSE.Evaluation.Expression
+  - BOOSE.Evaluation.VarName
+  - BOOSE.Evaluation.Value
+  - BOOSE.Evaluation.Local
+  - BOOSE.Command.IsDouble
+  - BOOSE.Command.program
+  - BOOSE.Command.parameterList
+  - BOOSE.Command.parameters
+  - BOOSE.Command.paramsint
+  - BOOSE.Command.ProcessParameters(System.String)
+  - BOOSE.Command.ToString
+  - BOOSE.Command.Program
+  - BOOSE.Command.Name
+  - BOOSE.Command.ParameterList
+  - BOOSE.Command.Parameters
+  - BOOSE.Command.Paramsint
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: BOOSEapplication.AppArray.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BOOSEapplication.AppArray.Set(BOOSE.StoredProgram,System.String)
+  id: Set(BOOSE.StoredProgram,System.String)
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: Set(StoredProgram, string)
+  nameWithType: AppArray.Set(StoredProgram, string)
+  fullName: BOOSEapplication.AppArray.Set(BOOSE.StoredProgram, string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Set
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 62
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Configures the array declaration by parsing the provided parameters.
+  remarks: >-
+    The <code class="paramref">parameters</code> string must specify the array type (e.g., "int" or
+        "real"),  the variable name, and the size. An optional second dimension can be included, separated by a
+        comma.
+  example: []
+  syntax:
+    content: public override void Set(StoredProgram program, string parameters)
+    parameters:
+    - id: program
+      type: BOOSE.StoredProgram
+      description: The <xref href="BOOSE.StoredProgram" data-throw-if-not-resolved="false"></xref> instance associated with this array declaration.
+    - id: parameters
+      type: System.String
+      description: >-
+        A string containing the array declaration parameters in the format:  "array &lt;type&gt; &lt;name&gt;
+            &lt;size&gt;[,&lt;dim&gt;]".
+    content.vb: Public Overrides Sub [Set](program As StoredProgram, parameters As String)
+  overridden: BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+  overload: BOOSEapplication.AppArray.Set*
+  exceptions:
+  - type: BOOSE.CommandException
+    commentId: T:BOOSE.CommandException
+    description: >-
+      Thrown if the <code class="paramref">parameters</code> string does not contain at least three parts  or does not
+          conform to the expected format.
+  implements:
+  - BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+  nameWithType.vb: AppArray.Set(StoredProgram, String)
+  fullName.vb: BOOSEapplication.AppArray.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
+- uid: BOOSEapplication.AppArray.Compile
+  commentId: M:BOOSEapplication.AppArray.Compile
+  id: Compile
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: Compile()
+  nameWithType: AppArray.Compile()
+  fullName: BOOSEapplication.AppArray.Compile()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Compile
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 92
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Allocates storage for the array based on its type and registers the variable with the program.
+  remarks: >-
+    This method initializes the array storage as a two-dimensional array of the specified
+        type (<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">int</a> or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types">double</a>). The variable is also registered with the program
+        to make it available for further operations.
+  example: []
+  syntax:
+    content: public override void Compile()
+    content.vb: Public Overrides Sub Compile()
+  overridden: BOOSEapplication.AppEvaluation.Compile
+  overload: BOOSEapplication.AppArray.Compile*
+  exceptions:
+  - type: BOOSE.CommandException
+    commentId: T:BOOSE.CommandException
+    description: Thrown if the specified array type is not supported. Supported types are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">int</a> and <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types">double</a>.
+  implements:
+  - BOOSE.ICommand.Compile
+- uid: BOOSEapplication.AppArray.Execute
+  commentId: M:BOOSEapplication.AppArray.Execute
+  id: Execute
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: AppArray.Execute()
+  fullName: BOOSEapplication.AppArray.Execute()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 115
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Executes the operation defined by the derived class.
+  remarks: >-
+    This method must be overridden in a derived class to provide the specific
+        implementation of the operation.
+  example: []
+  syntax:
+    content: public override void Execute()
+    content.vb: Public Overrides Sub Execute()
+  overridden: BOOSEapplication.AppEvaluation.Execute
+  overload: BOOSEapplication.AppArray.Execute*
+  implements:
+  - BOOSE.ICommand.Execute
+- uid: BOOSEapplication.AppArray.GetInt(System.Int32,System.Int32)
+  commentId: M:BOOSEapplication.AppArray.GetInt(System.Int32,System.Int32)
+  id: GetInt(System.Int32,System.Int32)
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: GetInt(int, int)
+  nameWithType: AppArray.GetInt(int, int)
+  fullName: BOOSEapplication.AppArray.GetInt(int, int)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: GetInt
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 126
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Retrieves the integer value at the specified row and column in the array.
+  example: []
+  syntax:
+    content: public int GetInt(int r, int c)
+    parameters:
+    - id: r
+      type: System.Int32
+      description: The zero-based row index of the value to retrieve.
+    - id: c
+      type: System.Int32
+      description: The zero-based column index of the value to retrieve.
+    return:
+      type: System.Int32
+      description: The integer value located at the specified row and column.
+    content.vb: Public Function GetInt(r As Integer, c As Integer) As Integer
+  overload: BOOSEapplication.AppArray.GetInt*
+  nameWithType.vb: AppArray.GetInt(Integer, Integer)
+  fullName.vb: BOOSEapplication.AppArray.GetInt(Integer, Integer)
+  name.vb: GetInt(Integer, Integer)
+- uid: BOOSEapplication.AppArray.GetReal(System.Int32,System.Int32)
+  commentId: M:BOOSEapplication.AppArray.GetReal(System.Int32,System.Int32)
+  id: GetReal(System.Int32,System.Int32)
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: GetReal(int, int)
+  nameWithType: AppArray.GetReal(int, int)
+  fullName: BOOSEapplication.AppArray.GetReal(int, int)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: GetReal
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 138
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Retrieves the real value at the specified row and column in the array.
+  example: []
+  syntax:
+    content: public double GetReal(int r, int c)
+    parameters:
+    - id: r
+      type: System.Int32
+      description: The zero-based row index of the value to retrieve.
+    - id: c
+      type: System.Int32
+      description: The zero-based column index of the value to retrieve.
+    return:
+      type: System.Double
+      description: The integer value located at the specified row and column.
+    content.vb: Public Function GetReal(r As Integer, c As Integer) As Double
+  overload: BOOSEapplication.AppArray.GetReal*
+  nameWithType.vb: AppArray.GetReal(Integer, Integer)
+  fullName.vb: BOOSEapplication.AppArray.GetReal(Integer, Integer)
+  name.vb: GetReal(Integer, Integer)
+- uid: BOOSEapplication.AppArray.SetInt(System.Int32,System.Int32,System.Int32)
+  commentId: M:BOOSEapplication.AppArray.SetInt(System.Int32,System.Int32,System.Int32)
+  id: SetInt(System.Int32,System.Int32,System.Int32)
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: SetInt(int, int, int)
+  nameWithType: AppArray.SetInt(int, int, int)
+  fullName: BOOSEapplication.AppArray.SetInt(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: SetInt
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 156
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: >-
+    Retrieves the real (double) value stored at the specified row and column
+
+    within the array.
+  example: []
+  syntax:
+    content: public void SetInt(int r, int c, int value)
+    parameters:
+    - id: r
+      type: System.Int32
+      description: The zero-based row index.
+    - id: c
+      type: System.Int32
+      description: The zero-based column index.
+    - id: value
+      type: System.Int32
+    content.vb: Public Sub SetInt(r As Integer, c As Integer, value As Integer)
+  overload: BOOSEapplication.AppArray.SetInt*
+  exceptions:
+  - type: BOOSE.CommandException
+    commentId: T:BOOSE.CommandException
+    description: Thrown when the specified row or column is outside the bounds of the array.
+  nameWithType.vb: AppArray.SetInt(Integer, Integer, Integer)
+  fullName.vb: BOOSEapplication.AppArray.SetInt(Integer, Integer, Integer)
+  name.vb: SetInt(Integer, Integer, Integer)
+- uid: BOOSEapplication.AppArray.SetReal(System.Int32,System.Int32,System.Double)
+  commentId: M:BOOSEapplication.AppArray.SetReal(System.Int32,System.Int32,System.Double)
+  id: SetReal(System.Int32,System.Int32,System.Double)
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: SetReal(int, int, double)
+  nameWithType: AppArray.SetReal(int, int, double)
+  fullName: BOOSEapplication.AppArray.SetReal(int, int, double)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: SetReal
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 171
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Assigns an integer value to the specified row and column in the array.
+  example: []
+  syntax:
+    content: public void SetReal(int r, int c, double value)
+    parameters:
+    - id: r
+      type: System.Int32
+      description: The zero-based row index.
+    - id: c
+      type: System.Int32
+      description: The zero-based column index.
+    - id: value
+      type: System.Double
+      description: The integer value to assign.
+    content.vb: Public Sub SetReal(r As Integer, c As Integer, value As Double)
+  overload: BOOSEapplication.AppArray.SetReal*
+  exceptions:
+  - type: BOOSE.CommandException
+    commentId: T:BOOSE.CommandException
+    description: Thrown when the specified row or column is outside the bounds of the array.
+  nameWithType.vb: AppArray.SetReal(Integer, Integer, Double)
+  fullName.vb: BOOSEapplication.AppArray.SetReal(Integer, Integer, Double)
+  name.vb: SetReal(Integer, Integer, Double)
+- uid: BOOSEapplication.AppArray.Rows
+  commentId: P:BOOSEapplication.AppArray.Rows
+  id: Rows
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: Rows
+  nameWithType: AppArray.Rows
+  fullName: BOOSEapplication.AppArray.Rows
+  type: Property
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Rows
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 198
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Gets the total number of rows in the array.
+  example: []
+  syntax:
+    content: public int Rows { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Rows As Integer
+  overload: BOOSEapplication.AppArray.Rows*
+- uid: BOOSEapplication.AppArray.Columns
+  commentId: P:BOOSEapplication.AppArray.Columns
+  id: Columns
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: Columns
+  nameWithType: AppArray.Columns
+  fullName: BOOSEapplication.AppArray.Columns
+  type: Property
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Columns
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 203
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Gets the total number of columns in the array.
+  example: []
+  syntax:
+    content: public int Columns { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Columns As Integer
+  overload: BOOSEapplication.AppArray.Columns*
+- uid: BOOSEapplication.AppArray.ArrayType
+  commentId: P:BOOSEapplication.AppArray.ArrayType
+  id: ArrayType
+  parent: BOOSEapplication.AppArray
+  langs:
+  - csharp
+  - vb
+  name: ArrayType
+  nameWithType: AppArray.ArrayType
+  fullName: BOOSEapplication.AppArray.ArrayType
+  type: Property
+  source:
+    remote:
+      path: BOOSEapplication/AppArray.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: ArrayType
+    path: ../BOOSEapplication/AppArray.cs
+    startLine: 208
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Gets the declared type of the array (e.g., <code>int</code> or <code>real</code>).
+  example: []
+  syntax:
+    content: public string ArrayType { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ArrayType As String
+  overload: BOOSEapplication.AppArray.ArrayType*
+references:
+- uid: BOOSEapplication
+  commentId: N:BOOSEapplication
+  href: BOOSEapplication.html
+  name: BOOSEapplication
+  nameWithType: BOOSEapplication
+  fullName: BOOSEapplication
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BOOSE.Command
+  commentId: T:BOOSE.Command
+  parent: BOOSE
+  isExternal: true
+  name: Command
+  nameWithType: Command
+  fullName: BOOSE.Command
+- uid: BOOSE.Evaluation
+  commentId: T:BOOSE.Evaluation
+  parent: BOOSE
+  isExternal: true
+  name: Evaluation
+  nameWithType: Evaluation
+  fullName: BOOSE.Evaluation
+- uid: BOOSEapplication.AppEvaluation
+  commentId: T:BOOSEapplication.AppEvaluation
+  parent: BOOSEapplication
+  href: BOOSEapplication.AppEvaluation.html
+  name: AppEvaluation
+  nameWithType: AppEvaluation
+  fullName: BOOSEapplication.AppEvaluation
+- uid: BOOSE.IEvaluation
+  commentId: T:BOOSE.IEvaluation
+  parent: BOOSE
+  isExternal: true
+  name: IEvaluation
+  nameWithType: IEvaluation
+  fullName: BOOSE.IEvaluation
+- uid: BOOSE.ICommand
+  commentId: T:BOOSE.ICommand
+  parent: BOOSE
+  isExternal: true
+  name: ICommand
+  nameWithType: ICommand
+  fullName: BOOSE.ICommand
+- uid: BOOSE.Evaluation.expression
+  commentId: F:BOOSE.Evaluation.expression
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: expression
+  nameWithType: Evaluation.expression
+  fullName: BOOSE.Evaluation.expression
+- uid: BOOSE.Evaluation.evaluatedExpression
+  commentId: F:BOOSE.Evaluation.evaluatedExpression
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: evaluatedExpression
+  nameWithType: Evaluation.evaluatedExpression
+  fullName: BOOSE.Evaluation.evaluatedExpression
+- uid: BOOSE.Evaluation.varName
+  commentId: F:BOOSE.Evaluation.varName
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: varName
+  nameWithType: Evaluation.varName
+  fullName: BOOSE.Evaluation.varName
+- uid: BOOSE.Evaluation.value
+  commentId: F:BOOSE.Evaluation.value
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: value
+  nameWithType: Evaluation.value
+  fullName: BOOSE.Evaluation.value
+- uid: BOOSE.Evaluation.CheckParameters(System.String[])
+  commentId: M:BOOSE.Evaluation.CheckParameters(System.String[])
+  parent: BOOSE.Evaluation
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: CheckParameters(string[])
+  nameWithType: Evaluation.CheckParameters(string[])
+  fullName: BOOSE.Evaluation.CheckParameters(string[])
+  nameWithType.vb: Evaluation.CheckParameters(String())
+  fullName.vb: BOOSE.Evaluation.CheckParameters(String())
+  name.vb: CheckParameters(String())
+  spec.csharp:
+  - uid: BOOSE.Evaluation.CheckParameters(System.String[])
+    name: CheckParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Evaluation.CheckParameters(System.String[])
+    name: CheckParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: BOOSE.Evaluation.ProcessExpression(System.String)
+  commentId: M:BOOSE.Evaluation.ProcessExpression(System.String)
+  parent: BOOSE.Evaluation
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: ProcessExpression(string)
+  nameWithType: Evaluation.ProcessExpression(string)
+  fullName: BOOSE.Evaluation.ProcessExpression(string)
+  nameWithType.vb: Evaluation.ProcessExpression(String)
+  fullName.vb: BOOSE.Evaluation.ProcessExpression(String)
+  name.vb: ProcessExpression(String)
+  spec.csharp:
+  - uid: BOOSE.Evaluation.ProcessExpression(System.String)
+    name: ProcessExpression
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Evaluation.ProcessExpression(System.String)
+    name: ProcessExpression
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSE.Evaluation.Expression
+  commentId: P:BOOSE.Evaluation.Expression
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: Expression
+  nameWithType: Evaluation.Expression
+  fullName: BOOSE.Evaluation.Expression
+- uid: BOOSE.Evaluation.VarName
+  commentId: P:BOOSE.Evaluation.VarName
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: VarName
+  nameWithType: Evaluation.VarName
+  fullName: BOOSE.Evaluation.VarName
+- uid: BOOSE.Evaluation.Value
+  commentId: P:BOOSE.Evaluation.Value
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: Value
+  nameWithType: Evaluation.Value
+  fullName: BOOSE.Evaluation.Value
+- uid: BOOSE.Evaluation.Local
+  commentId: P:BOOSE.Evaluation.Local
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: Local
+  nameWithType: Evaluation.Local
+  fullName: BOOSE.Evaluation.Local
+- uid: BOOSE.Command.IsDouble
+  commentId: F:BOOSE.Command.IsDouble
+  parent: BOOSE.Command
+  isExternal: true
+  name: IsDouble
+  nameWithType: Command.IsDouble
+  fullName: BOOSE.Command.IsDouble
+- uid: BOOSE.Command.program
+  commentId: F:BOOSE.Command.program
+  parent: BOOSE.Command
+  isExternal: true
+  name: program
+  nameWithType: Command.program
+  fullName: BOOSE.Command.program
+- uid: BOOSE.Command.parameterList
+  commentId: F:BOOSE.Command.parameterList
+  parent: BOOSE.Command
+  isExternal: true
+  name: parameterList
+  nameWithType: Command.parameterList
+  fullName: BOOSE.Command.parameterList
+- uid: BOOSE.Command.parameters
+  commentId: F:BOOSE.Command.parameters
+  parent: BOOSE.Command
+  isExternal: true
+  name: parameters
+  nameWithType: Command.parameters
+  fullName: BOOSE.Command.parameters
+- uid: BOOSE.Command.paramsint
+  commentId: F:BOOSE.Command.paramsint
+  parent: BOOSE.Command
+  isExternal: true
+  name: paramsint
+  nameWithType: Command.paramsint
+  fullName: BOOSE.Command.paramsint
+- uid: BOOSE.Command.ProcessParameters(System.String)
+  commentId: M:BOOSE.Command.ProcessParameters(System.String)
+  parent: BOOSE.Command
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: ProcessParameters(string)
+  nameWithType: Command.ProcessParameters(string)
+  fullName: BOOSE.Command.ProcessParameters(string)
+  nameWithType.vb: Command.ProcessParameters(String)
+  fullName.vb: BOOSE.Command.ProcessParameters(String)
+  name.vb: ProcessParameters(String)
+  spec.csharp:
+  - uid: BOOSE.Command.ProcessParameters(System.String)
+    name: ProcessParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Command.ProcessParameters(System.String)
+    name: ProcessParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSE.Command.ToString
+  commentId: M:BOOSE.Command.ToString
+  parent: BOOSE.Command
+  isExternal: true
+  name: ToString()
+  nameWithType: Command.ToString()
+  fullName: BOOSE.Command.ToString()
+  spec.csharp:
+  - uid: BOOSE.Command.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Command.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSE.Command.Program
+  commentId: P:BOOSE.Command.Program
+  parent: BOOSE.Command
+  isExternal: true
+  name: Program
+  nameWithType: Command.Program
+  fullName: BOOSE.Command.Program
+- uid: BOOSE.Command.Name
+  commentId: P:BOOSE.Command.Name
+  parent: BOOSE.Command
+  isExternal: true
+  name: Name
+  nameWithType: Command.Name
+  fullName: BOOSE.Command.Name
+- uid: BOOSE.Command.ParameterList
+  commentId: P:BOOSE.Command.ParameterList
+  parent: BOOSE.Command
+  isExternal: true
+  name: ParameterList
+  nameWithType: Command.ParameterList
+  fullName: BOOSE.Command.ParameterList
+- uid: BOOSE.Command.Parameters
+  commentId: P:BOOSE.Command.Parameters
+  parent: BOOSE.Command
+  isExternal: true
+  name: Parameters
+  nameWithType: Command.Parameters
+  fullName: BOOSE.Command.Parameters
+- uid: BOOSE.Command.Paramsint
+  commentId: P:BOOSE.Command.Paramsint
+  parent: BOOSE.Command
+  isExternal: true
+  name: Paramsint
+  nameWithType: Command.Paramsint
+  fullName: BOOSE.Command.Paramsint
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSE
+  commentId: N:BOOSE
+  isExternal: true
+  name: BOOSE
+  nameWithType: BOOSE
+  fullName: BOOSE
+- uid: BOOSE.StoredProgram
+  commentId: T:BOOSE.StoredProgram
+  parent: BOOSE
+  isExternal: true
+  name: StoredProgram
+  nameWithType: StoredProgram
+  fullName: BOOSE.StoredProgram
+- uid: BOOSE.CommandException
+  commentId: T:BOOSE.CommandException
+  parent: BOOSE
+  isExternal: true
+  name: CommandException
+  nameWithType: CommandException
+  fullName: BOOSE.CommandException
+- uid: BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+  parent: BOOSE.Command
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: Set(StoredProgram, string)
+  nameWithType: Command.Set(StoredProgram, string)
+  fullName: BOOSE.Command.Set(BOOSE.StoredProgram, string)
+  nameWithType.vb: Command.Set(StoredProgram, String)
+  fullName.vb: BOOSE.Command.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
+  spec.csharp:
+  - uid: BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSEapplication.AppArray.Set*
+  commentId: Overload:BOOSEapplication.AppArray.Set
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_Set_BOOSE_StoredProgram_System_String_
+  name: Set
+  nameWithType: AppArray.Set
+  fullName: BOOSEapplication.AppArray.Set
+- uid: BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+  parent: BOOSE.ICommand
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: Set(StoredProgram, string)
+  nameWithType: ICommand.Set(StoredProgram, string)
+  fullName: BOOSE.ICommand.Set(BOOSE.StoredProgram, string)
+  nameWithType.vb: ICommand.Set(StoredProgram, String)
+  fullName.vb: BOOSE.ICommand.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
+  spec.csharp:
+  - uid: BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BOOSEapplication.AppEvaluation.Compile
+  commentId: M:BOOSEapplication.AppEvaluation.Compile
+  parent: BOOSEapplication.AppEvaluation
+  href: BOOSEapplication.AppEvaluation.html#BOOSEapplication_AppEvaluation_Compile
+  name: Compile()
+  nameWithType: AppEvaluation.Compile()
+  fullName: BOOSEapplication.AppEvaluation.Compile()
+  spec.csharp:
+  - uid: BOOSEapplication.AppEvaluation.Compile
+    name: Compile
+    href: BOOSEapplication.AppEvaluation.html#BOOSEapplication_AppEvaluation_Compile
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSEapplication.AppEvaluation.Compile
+    name: Compile
+    href: BOOSEapplication.AppEvaluation.html#BOOSEapplication_AppEvaluation_Compile
+  - name: (
+  - name: )
+- uid: BOOSEapplication.AppArray.Compile*
+  commentId: Overload:BOOSEapplication.AppArray.Compile
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_Compile
+  name: Compile
+  nameWithType: AppArray.Compile
+  fullName: BOOSEapplication.AppArray.Compile
+- uid: BOOSE.ICommand.Compile
+  commentId: M:BOOSE.ICommand.Compile
+  parent: BOOSE.ICommand
+  isExternal: true
+  name: Compile()
+  nameWithType: ICommand.Compile()
+  fullName: BOOSE.ICommand.Compile()
+  spec.csharp:
+  - uid: BOOSE.ICommand.Compile
+    name: Compile
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICommand.Compile
+    name: Compile
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSEapplication.AppEvaluation.Execute
+  commentId: M:BOOSEapplication.AppEvaluation.Execute
+  parent: BOOSEapplication.AppEvaluation
+  href: BOOSEapplication.AppEvaluation.html#BOOSEapplication_AppEvaluation_Execute
+  name: Execute()
+  nameWithType: AppEvaluation.Execute()
+  fullName: BOOSEapplication.AppEvaluation.Execute()
+  spec.csharp:
+  - uid: BOOSEapplication.AppEvaluation.Execute
+    name: Execute
+    href: BOOSEapplication.AppEvaluation.html#BOOSEapplication_AppEvaluation_Execute
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSEapplication.AppEvaluation.Execute
+    name: Execute
+    href: BOOSEapplication.AppEvaluation.html#BOOSEapplication_AppEvaluation_Execute
+  - name: (
+  - name: )
+- uid: BOOSEapplication.AppArray.Execute*
+  commentId: Overload:BOOSEapplication.AppArray.Execute
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_Execute
+  name: Execute
+  nameWithType: AppArray.Execute
+  fullName: BOOSEapplication.AppArray.Execute
+- uid: BOOSE.ICommand.Execute
+  commentId: M:BOOSE.ICommand.Execute
+  parent: BOOSE.ICommand
+  isExternal: true
+  name: Execute()
+  nameWithType: ICommand.Execute()
+  fullName: BOOSE.ICommand.Execute()
+  spec.csharp:
+  - uid: BOOSE.ICommand.Execute
+    name: Execute
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICommand.Execute
+    name: Execute
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSEapplication.AppArray.GetInt*
+  commentId: Overload:BOOSEapplication.AppArray.GetInt
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_GetInt_System_Int32_System_Int32_
+  name: GetInt
+  nameWithType: AppArray.GetInt
+  fullName: BOOSEapplication.AppArray.GetInt
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BOOSEapplication.AppArray.GetReal*
+  commentId: Overload:BOOSEapplication.AppArray.GetReal
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_GetReal_System_Int32_System_Int32_
+  name: GetReal
+  nameWithType: AppArray.GetReal
+  fullName: BOOSEapplication.AppArray.GetReal
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BOOSEapplication.AppArray.SetInt*
+  commentId: Overload:BOOSEapplication.AppArray.SetInt
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_SetInt_System_Int32_System_Int32_System_Int32_
+  name: SetInt
+  nameWithType: AppArray.SetInt
+  fullName: BOOSEapplication.AppArray.SetInt
+- uid: BOOSEapplication.AppArray.SetReal*
+  commentId: Overload:BOOSEapplication.AppArray.SetReal
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_SetReal_System_Int32_System_Int32_System_Double_
+  name: SetReal
+  nameWithType: AppArray.SetReal
+  fullName: BOOSEapplication.AppArray.SetReal
+- uid: BOOSEapplication.AppArray.Rows*
+  commentId: Overload:BOOSEapplication.AppArray.Rows
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_Rows
+  name: Rows
+  nameWithType: AppArray.Rows
+  fullName: BOOSEapplication.AppArray.Rows
+- uid: BOOSEapplication.AppArray.Columns*
+  commentId: Overload:BOOSEapplication.AppArray.Columns
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_Columns
+  name: Columns
+  nameWithType: AppArray.Columns
+  fullName: BOOSEapplication.AppArray.Columns
+- uid: BOOSEapplication.AppArray.ArrayType*
+  commentId: Overload:BOOSEapplication.AppArray.ArrayType
+  href: BOOSEapplication.AppArray.html#BOOSEapplication_AppArray_ArrayType
+  name: ArrayType
+  nameWithType: AppArray.ArrayType
+  fullName: BOOSEapplication.AppArray.ArrayType

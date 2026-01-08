@@ -1,0 +1,712 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapplication.Tests.PenCommandTests
+  commentId: T:BOOSEapplication.Tests.PenCommandTests
+  id: PenCommandTests
+  parent: BOOSEapplication.Tests
+  children:
+  - BOOSEapplication.Tests.PenCommandTests.Execute_InvalidWidth_DoesNotThrow
+  - BOOSEapplication.Tests.PenCommandTests.Execute_LiteralRGB_DoesNotThrow
+  - BOOSEapplication.Tests.PenCommandTests.Execute_NoWidthProvided_DoesNotThrow
+  - BOOSEapplication.Tests.PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow
+  - BOOSEapplication.Tests.PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow
+  - BOOSEapplication.Tests.PenCommandTests.Execute_UsesIntVariables_DoesNotThrow
+  - BOOSEapplication.Tests.PenCommandTests.ResetErrorReport
+  - BOOSEapplication.Tests.PenCommandTests.Set_InvalidParameterCount_DoesNotThrow
+  langs:
+  - csharp
+  - vb
+  name: PenCommandTests
+  nameWithType: PenCommandTests
+  fullName: BOOSEapplication.Tests.PenCommandTests
+  type: Class
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: PenCommandTests
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 16
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: >-
+    Unit tests for the <xref href="BOOSEapplication.PenCommand" data-throw-if-not-resolved="false"></xref> class.
+
+    These tests verify that the command executes safely under a variety
+
+    of parameter conditions, without throwing exceptions.
+
+
+    Because <xref href="BOOSEapplication.AppCanvas" data-throw-if-not-resolved="false"></xref> cannot be mocked or inspected safely,
+
+    these tests focus solely on ensuring that <xref href="BOOSEapplication.PenCommand" data-throw-if-not-resolved="false"></xref>
+
+    accepts parameters, resolves variables and expressions, and executes
+
+    without runtime errors.
+  example: []
+  syntax:
+    content: >-
+      [TestClass]
+
+      public class PenCommandTests
+    content.vb: >-
+      <TestClass>
+
+      Public Class PenCommandTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.PenCommandTests.ResetErrorReport
+  commentId: M:BOOSEapplication.Tests.PenCommandTests.ResetErrorReport
+  id: ResetErrorReport
+  parent: BOOSEapplication.Tests.PenCommandTests
+  langs:
+  - csharp
+  - vb
+  name: ResetErrorReport()
+  nameWithType: PenCommandTests.ResetErrorReport()
+  fullName: BOOSEapplication.Tests.PenCommandTests.ResetErrorReport()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: ResetErrorReport
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 35
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: >-
+    Resets the static <xref href="BOOSEapplication.ErrorReport" data-throw-if-not-resolved="false"></xref> state before each test
+
+    to ensure tests do not interfere with one another.
+  example: []
+  syntax:
+    content: >-
+      [TestInitialize]
+
+      public void ResetErrorReport()
+    content.vb: >-
+      <TestInitialize>
+
+      Public Sub ResetErrorReport()
+  overload: BOOSEapplication.Tests.PenCommandTests.ResetErrorReport*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_LiteralRGB_DoesNotThrow
+  commentId: M:BOOSEapplication.Tests.PenCommandTests.Execute_LiteralRGB_DoesNotThrow
+  id: Execute_LiteralRGB_DoesNotThrow
+  parent: BOOSEapplication.Tests.PenCommandTests
+  langs:
+  - csharp
+  - vb
+  name: Execute_LiteralRGB_DoesNotThrow()
+  nameWithType: PenCommandTests.Execute_LiteralRGB_DoesNotThrow()
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_LiteralRGB_DoesNotThrow()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute_LiteralRGB_DoesNotThrow
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 45
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that literal RGB values and width execute without throwing.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Execute_LiteralRGB_DoesNotThrow()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Execute_LiteralRGB_DoesNotThrow()
+  overload: BOOSEapplication.Tests.PenCommandTests.Execute_LiteralRGB_DoesNotThrow*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_NoWidthProvided_DoesNotThrow
+  commentId: M:BOOSEapplication.Tests.PenCommandTests.Execute_NoWidthProvided_DoesNotThrow
+  id: Execute_NoWidthProvided_DoesNotThrow
+  parent: BOOSEapplication.Tests.PenCommandTests
+  langs:
+  - csharp
+  - vb
+  name: Execute_NoWidthProvided_DoesNotThrow()
+  nameWithType: PenCommandTests.Execute_NoWidthProvided_DoesNotThrow()
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_NoWidthProvided_DoesNotThrow()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute_NoWidthProvided_DoesNotThrow
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 59
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that omitting the width parameter does not cause execution failure.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Execute_NoWidthProvided_DoesNotThrow()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Execute_NoWidthProvided_DoesNotThrow()
+  overload: BOOSEapplication.Tests.PenCommandTests.Execute_NoWidthProvided_DoesNotThrow*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_InvalidWidth_DoesNotThrow
+  commentId: M:BOOSEapplication.Tests.PenCommandTests.Execute_InvalidWidth_DoesNotThrow
+  id: Execute_InvalidWidth_DoesNotThrow
+  parent: BOOSEapplication.Tests.PenCommandTests
+  langs:
+  - csharp
+  - vb
+  name: Execute_InvalidWidth_DoesNotThrow()
+  nameWithType: PenCommandTests.Execute_InvalidWidth_DoesNotThrow()
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_InvalidWidth_DoesNotThrow()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute_InvalidWidth_DoesNotThrow
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 73
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that an invalid width value does not cause execution failure.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Execute_InvalidWidth_DoesNotThrow()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Execute_InvalidWidth_DoesNotThrow()
+  overload: BOOSEapplication.Tests.PenCommandTests.Execute_InvalidWidth_DoesNotThrow*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow
+  commentId: M:BOOSEapplication.Tests.PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow
+  id: Execute_RGBOutOfRange_DoesNotThrow
+  parent: BOOSEapplication.Tests.PenCommandTests
+  langs:
+  - csharp
+  - vb
+  name: Execute_RGBOutOfRange_DoesNotThrow()
+  nameWithType: PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow()
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute_RGBOutOfRange_DoesNotThrow
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 87
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that out-of-range RGB values do not cause execution failure.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Execute_RGBOutOfRange_DoesNotThrow()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Execute_RGBOutOfRange_DoesNotThrow()
+  overload: BOOSEapplication.Tests.PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_UsesIntVariables_DoesNotThrow
+  commentId: M:BOOSEapplication.Tests.PenCommandTests.Execute_UsesIntVariables_DoesNotThrow
+  id: Execute_UsesIntVariables_DoesNotThrow
+  parent: BOOSEapplication.Tests.PenCommandTests
+  langs:
+  - csharp
+  - vb
+  name: Execute_UsesIntVariables_DoesNotThrow()
+  nameWithType: PenCommandTests.Execute_UsesIntVariables_DoesNotThrow()
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_UsesIntVariables_DoesNotThrow()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute_UsesIntVariables_DoesNotThrow
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 101
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that integer variables used as RGB parameters do not cause execution failure.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Execute_UsesIntVariables_DoesNotThrow()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Execute_UsesIntVariables_DoesNotThrow()
+  overload: BOOSEapplication.Tests.PenCommandTests.Execute_UsesIntVariables_DoesNotThrow*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow
+  commentId: M:BOOSEapplication.Tests.PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow
+  id: Execute_UsesExpressionEvaluation_DoesNotThrow
+  parent: BOOSEapplication.Tests.PenCommandTests
+  langs:
+  - csharp
+  - vb
+  name: Execute_UsesExpressionEvaluation_DoesNotThrow()
+  nameWithType: PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow()
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute_UsesExpressionEvaluation_DoesNotThrow
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 130
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that expressions used as RGB parameters execute without throwing.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Execute_UsesExpressionEvaluation_DoesNotThrow()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Execute_UsesExpressionEvaluation_DoesNotThrow()
+  overload: BOOSEapplication.Tests.PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.PenCommandTests.Set_InvalidParameterCount_DoesNotThrow
+  commentId: M:BOOSEapplication.Tests.PenCommandTests.Set_InvalidParameterCount_DoesNotThrow
+  id: Set_InvalidParameterCount_DoesNotThrow
+  parent: BOOSEapplication.Tests.PenCommandTests
+  langs:
+  - csharp
+  - vb
+  name: Set_InvalidParameterCount_DoesNotThrow()
+  nameWithType: PenCommandTests.Set_InvalidParameterCount_DoesNotThrow()
+  fullName: BOOSEapplication.Tests.PenCommandTests.Set_InvalidParameterCount_DoesNotThrow()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/PenCommandTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Set_InvalidParameterCount_DoesNotThrow
+    path: ../BOOSEapplication.Tests/PenCommandTests.cs
+    startLine: 149
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that providing too few parameters does not cause execution failure.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Set_InvalidParameterCount_DoesNotThrow()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Set_InvalidParameterCount_DoesNotThrow()
+  overload: BOOSEapplication.Tests.PenCommandTests.Set_InvalidParameterCount_DoesNotThrow*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+references:
+- uid: BOOSEapplication.PenCommand
+  commentId: T:BOOSEapplication.PenCommand
+  href: BOOSEapplication.PenCommand.html
+  name: PenCommand
+  nameWithType: PenCommand
+  fullName: BOOSEapplication.PenCommand
+- uid: BOOSEapplication.AppCanvas
+  commentId: T:BOOSEapplication.AppCanvas
+  parent: BOOSEapplication
+  href: BOOSEapplication.AppCanvas.html
+  name: AppCanvas
+  nameWithType: AppCanvas
+  fullName: BOOSEapplication.AppCanvas
+- uid: BOOSEapplication.Tests
+  commentId: N:BOOSEapplication.Tests
+  href: BOOSEapplication.html
+  name: BOOSEapplication.Tests
+  nameWithType: BOOSEapplication.Tests
+  fullName: BOOSEapplication.Tests
+  spec.csharp:
+  - uid: BOOSEapplication
+    name: BOOSEapplication
+    href: BOOSEapplication.html
+  - name: .
+  - uid: BOOSEapplication.Tests
+    name: Tests
+    href: BOOSEapplication.Tests.html
+  spec.vb:
+  - uid: BOOSEapplication
+    name: BOOSEapplication
+    href: BOOSEapplication.html
+  - name: .
+  - uid: BOOSEapplication.Tests
+    name: Tests
+    href: BOOSEapplication.Tests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: BOOSEapplication
+  commentId: N:BOOSEapplication
+  href: BOOSEapplication.html
+  name: BOOSEapplication
+  nameWithType: BOOSEapplication
+  fullName: BOOSEapplication
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSEapplication.ErrorReport
+  commentId: T:BOOSEapplication.ErrorReport
+  href: BOOSEapplication.ErrorReport.html
+  name: ErrorReport
+  nameWithType: ErrorReport
+  fullName: BOOSEapplication.ErrorReport
+- uid: BOOSEapplication.Tests.PenCommandTests.ResetErrorReport*
+  commentId: Overload:BOOSEapplication.Tests.PenCommandTests.ResetErrorReport
+  href: BOOSEapplication.Tests.PenCommandTests.html#BOOSEapplication_Tests_PenCommandTests_ResetErrorReport
+  name: ResetErrorReport
+  nameWithType: PenCommandTests.ResetErrorReport
+  fullName: BOOSEapplication.Tests.PenCommandTests.ResetErrorReport
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_LiteralRGB_DoesNotThrow*
+  commentId: Overload:BOOSEapplication.Tests.PenCommandTests.Execute_LiteralRGB_DoesNotThrow
+  href: BOOSEapplication.Tests.PenCommandTests.html#BOOSEapplication_Tests_PenCommandTests_Execute_LiteralRGB_DoesNotThrow
+  name: Execute_LiteralRGB_DoesNotThrow
+  nameWithType: PenCommandTests.Execute_LiteralRGB_DoesNotThrow
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_LiteralRGB_DoesNotThrow
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_NoWidthProvided_DoesNotThrow*
+  commentId: Overload:BOOSEapplication.Tests.PenCommandTests.Execute_NoWidthProvided_DoesNotThrow
+  href: BOOSEapplication.Tests.PenCommandTests.html#BOOSEapplication_Tests_PenCommandTests_Execute_NoWidthProvided_DoesNotThrow
+  name: Execute_NoWidthProvided_DoesNotThrow
+  nameWithType: PenCommandTests.Execute_NoWidthProvided_DoesNotThrow
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_NoWidthProvided_DoesNotThrow
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_InvalidWidth_DoesNotThrow*
+  commentId: Overload:BOOSEapplication.Tests.PenCommandTests.Execute_InvalidWidth_DoesNotThrow
+  href: BOOSEapplication.Tests.PenCommandTests.html#BOOSEapplication_Tests_PenCommandTests_Execute_InvalidWidth_DoesNotThrow
+  name: Execute_InvalidWidth_DoesNotThrow
+  nameWithType: PenCommandTests.Execute_InvalidWidth_DoesNotThrow
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_InvalidWidth_DoesNotThrow
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow*
+  commentId: Overload:BOOSEapplication.Tests.PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow
+  href: BOOSEapplication.Tests.PenCommandTests.html#BOOSEapplication_Tests_PenCommandTests_Execute_RGBOutOfRange_DoesNotThrow
+  name: Execute_RGBOutOfRange_DoesNotThrow
+  nameWithType: PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_RGBOutOfRange_DoesNotThrow
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_UsesIntVariables_DoesNotThrow*
+  commentId: Overload:BOOSEapplication.Tests.PenCommandTests.Execute_UsesIntVariables_DoesNotThrow
+  href: BOOSEapplication.Tests.PenCommandTests.html#BOOSEapplication_Tests_PenCommandTests_Execute_UsesIntVariables_DoesNotThrow
+  name: Execute_UsesIntVariables_DoesNotThrow
+  nameWithType: PenCommandTests.Execute_UsesIntVariables_DoesNotThrow
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_UsesIntVariables_DoesNotThrow
+- uid: BOOSEapplication.Tests.PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow*
+  commentId: Overload:BOOSEapplication.Tests.PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow
+  href: BOOSEapplication.Tests.PenCommandTests.html#BOOSEapplication_Tests_PenCommandTests_Execute_UsesExpressionEvaluation_DoesNotThrow
+  name: Execute_UsesExpressionEvaluation_DoesNotThrow
+  nameWithType: PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow
+  fullName: BOOSEapplication.Tests.PenCommandTests.Execute_UsesExpressionEvaluation_DoesNotThrow
+- uid: BOOSEapplication.Tests.PenCommandTests.Set_InvalidParameterCount_DoesNotThrow*
+  commentId: Overload:BOOSEapplication.Tests.PenCommandTests.Set_InvalidParameterCount_DoesNotThrow
+  href: BOOSEapplication.Tests.PenCommandTests.html#BOOSEapplication_Tests_PenCommandTests_Set_InvalidParameterCount_DoesNotThrow
+  name: Set_InvalidParameterCount_DoesNotThrow
+  nameWithType: PenCommandTests.Set_InvalidParameterCount_DoesNotThrow
+  fullName: BOOSEapplication.Tests.PenCommandTests.Set_InvalidParameterCount_DoesNotThrow

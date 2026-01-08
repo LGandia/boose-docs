@@ -1,0 +1,682 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapplication.NullCommand
+  commentId: T:BOOSEapplication.NullCommand
+  id: NullCommand
+  parent: BOOSEapplication
+  children:
+  - BOOSEapplication.NullCommand.CheckParameters(System.String[])
+  - BOOSEapplication.NullCommand.Compile
+  - BOOSEapplication.NullCommand.Execute
+  - BOOSEapplication.NullCommand.Execute(BOOSE.ICanvas)
+  - BOOSEapplication.NullCommand.Set(BOOSE.StoredProgram,System.String)
+  langs:
+  - csharp
+  - vb
+  name: NullCommand
+  nameWithType: NullCommand
+  fullName: BOOSEapplication.NullCommand
+  type: Class
+  source:
+    remote:
+      path: BOOSEapplication/NullCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: NullCommand
+    path: ../BOOSEapplication/NullCommand.cs
+    startLine: 14
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: >-
+    A no‑operation command used as a safe fallback when an unknown or
+
+    unrecognized command is encountered. This command intentionally performs
+
+    no actions and ensures the program continues running without interruption.
+  example: []
+  syntax:
+    content: 'public class NullCommand : ICommand'
+    content.vb: Public Class NullCommand Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - BOOSE.ICommand
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BOOSEapplication.NullCommand.CheckParameters(System.String[])
+  commentId: M:BOOSEapplication.NullCommand.CheckParameters(System.String[])
+  id: CheckParameters(System.String[])
+  parent: BOOSEapplication.NullCommand
+  langs:
+  - csharp
+  - vb
+  name: CheckParameters(string[])
+  nameWithType: NullCommand.CheckParameters(string[])
+  fullName: BOOSEapplication.NullCommand.CheckParameters(string[])
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/NullCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: CheckParameters
+    path: ../BOOSEapplication/NullCommand.cs
+    startLine: 20
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Accepts a parameter list but performs no validation or processing.
+  example: []
+  syntax:
+    content: public void CheckParameters(string[] Parameters)
+    parameters:
+    - id: Parameters
+      type: System.String[]
+      description: The parameters supplied to the command.
+    content.vb: Public Sub CheckParameters(Parameters As String())
+  overload: BOOSEapplication.NullCommand.CheckParameters*
+  implements:
+  - BOOSE.ICommand.CheckParameters(System.String[])
+  nameWithType.vb: NullCommand.CheckParameters(String())
+  fullName.vb: BOOSEapplication.NullCommand.CheckParameters(String())
+  name.vb: CheckParameters(String())
+- uid: BOOSEapplication.NullCommand.Compile
+  commentId: M:BOOSEapplication.NullCommand.Compile
+  id: Compile
+  parent: BOOSEapplication.NullCommand
+  langs:
+  - csharp
+  - vb
+  name: Compile()
+  nameWithType: NullCommand.Compile()
+  fullName: BOOSEapplication.NullCommand.Compile()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/NullCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Compile
+    path: ../BOOSEapplication/NullCommand.cs
+    startLine: 26
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: >-
+    Compiles the command. For <xref href="BOOSEapplication.NullCommand" data-throw-if-not-resolved="false"></xref>, this method
+
+    performs no work and always succeeds.
+  example: []
+  syntax:
+    content: public void Compile()
+    content.vb: Public Sub Compile()
+  overload: BOOSEapplication.NullCommand.Compile*
+  implements:
+  - BOOSE.ICommand.Compile
+- uid: BOOSEapplication.NullCommand.Execute(BOOSE.ICanvas)
+  commentId: M:BOOSEapplication.NullCommand.Execute(BOOSE.ICanvas)
+  id: Execute(BOOSE.ICanvas)
+  parent: BOOSEapplication.NullCommand
+  langs:
+  - csharp
+  - vb
+  name: Execute(ICanvas)
+  nameWithType: NullCommand.Execute(ICanvas)
+  fullName: BOOSEapplication.NullCommand.Execute(BOOSE.ICanvas)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/NullCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute
+    path: ../BOOSEapplication/NullCommand.cs
+    startLine: 33
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: >-
+    Executes the command using the provided canvas. This implementation
+
+    intentionally performs no drawing or state changes.
+  example: []
+  syntax:
+    content: public void Execute(ICanvas canvas)
+    parameters:
+    - id: canvas
+      type: BOOSE.ICanvas
+      description: The canvas on which the command would execute.
+    content.vb: Public Sub Execute(canvas As ICanvas)
+  overload: BOOSEapplication.NullCommand.Execute*
+- uid: BOOSEapplication.NullCommand.Execute
+  commentId: M:BOOSEapplication.NullCommand.Execute
+  id: Execute
+  parent: BOOSEapplication.NullCommand
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: NullCommand.Execute()
+  fullName: BOOSEapplication.NullCommand.Execute()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/NullCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute
+    path: ../BOOSEapplication/NullCommand.cs
+    startLine: 42
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: >-
+    Executes the command without requiring a canvas. This overload also
+
+    performs no work.
+  example: []
+  syntax:
+    content: public void Execute()
+    content.vb: Public Sub Execute()
+  overload: BOOSEapplication.NullCommand.Execute*
+  implements:
+  - BOOSE.ICommand.Execute
+- uid: BOOSEapplication.NullCommand.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BOOSEapplication.NullCommand.Set(BOOSE.StoredProgram,System.String)
+  id: Set(BOOSE.StoredProgram,System.String)
+  parent: BOOSEapplication.NullCommand
+  langs:
+  - csharp
+  - vb
+  name: Set(StoredProgram, string)
+  nameWithType: NullCommand.Set(StoredProgram, string)
+  fullName: BOOSEapplication.NullCommand.Set(BOOSE.StoredProgram, string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/NullCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Set
+    path: ../BOOSEapplication/NullCommand.cs
+    startLine: 50
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: >-
+    Sets the command context and raw parameter string. For
+
+    <xref href="BOOSEapplication.NullCommand" data-throw-if-not-resolved="false"></xref>, this method stores nothing and performs no work.
+  example: []
+  syntax:
+    content: public void Set(StoredProgram Program, string Params)
+    parameters:
+    - id: Program
+      type: BOOSE.StoredProgram
+      description: The program that owns this command.
+    - id: Params
+      type: System.String
+      description: The raw parameter string.
+    content.vb: Public Sub [Set](Program As StoredProgram, Params As String)
+  overload: BOOSEapplication.NullCommand.Set*
+  implements:
+  - BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+  nameWithType.vb: NullCommand.Set(StoredProgram, String)
+  fullName.vb: BOOSEapplication.NullCommand.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
+references:
+- uid: BOOSEapplication
+  commentId: N:BOOSEapplication
+  href: BOOSEapplication.html
+  name: BOOSEapplication
+  nameWithType: BOOSEapplication
+  fullName: BOOSEapplication
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BOOSE.ICommand
+  commentId: T:BOOSE.ICommand
+  parent: BOOSE
+  isExternal: true
+  name: ICommand
+  nameWithType: ICommand
+  fullName: BOOSE.ICommand
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSE
+  commentId: N:BOOSE
+  isExternal: true
+  name: BOOSE
+  nameWithType: BOOSE
+  fullName: BOOSE
+- uid: BOOSEapplication.NullCommand.CheckParameters*
+  commentId: Overload:BOOSEapplication.NullCommand.CheckParameters
+  href: BOOSEapplication.NullCommand.html#BOOSEapplication_NullCommand_CheckParameters_System_String___
+  name: CheckParameters
+  nameWithType: NullCommand.CheckParameters
+  fullName: BOOSEapplication.NullCommand.CheckParameters
+- uid: BOOSE.ICommand.CheckParameters(System.String[])
+  commentId: M:BOOSE.ICommand.CheckParameters(System.String[])
+  parent: BOOSE.ICommand
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: CheckParameters(string[])
+  nameWithType: ICommand.CheckParameters(string[])
+  fullName: BOOSE.ICommand.CheckParameters(string[])
+  nameWithType.vb: ICommand.CheckParameters(String())
+  fullName.vb: BOOSE.ICommand.CheckParameters(String())
+  name.vb: CheckParameters(String())
+  spec.csharp:
+  - uid: BOOSE.ICommand.CheckParameters(System.String[])
+    name: CheckParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICommand.CheckParameters(System.String[])
+    name: CheckParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: BOOSEapplication.NullCommand
+  commentId: T:BOOSEapplication.NullCommand
+  href: BOOSEapplication.NullCommand.html
+  name: NullCommand
+  nameWithType: NullCommand
+  fullName: BOOSEapplication.NullCommand
+- uid: BOOSEapplication.NullCommand.Compile*
+  commentId: Overload:BOOSEapplication.NullCommand.Compile
+  href: BOOSEapplication.NullCommand.html#BOOSEapplication_NullCommand_Compile
+  name: Compile
+  nameWithType: NullCommand.Compile
+  fullName: BOOSEapplication.NullCommand.Compile
+- uid: BOOSE.ICommand.Compile
+  commentId: M:BOOSE.ICommand.Compile
+  parent: BOOSE.ICommand
+  isExternal: true
+  name: Compile()
+  nameWithType: ICommand.Compile()
+  fullName: BOOSE.ICommand.Compile()
+  spec.csharp:
+  - uid: BOOSE.ICommand.Compile
+    name: Compile
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICommand.Compile
+    name: Compile
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSEapplication.NullCommand.Execute*
+  commentId: Overload:BOOSEapplication.NullCommand.Execute
+  href: BOOSEapplication.NullCommand.html#BOOSEapplication_NullCommand_Execute_BOOSE_ICanvas_
+  name: Execute
+  nameWithType: NullCommand.Execute
+  fullName: BOOSEapplication.NullCommand.Execute
+- uid: BOOSE.ICanvas
+  commentId: T:BOOSE.ICanvas
+  parent: BOOSE
+  isExternal: true
+  name: ICanvas
+  nameWithType: ICanvas
+  fullName: BOOSE.ICanvas
+- uid: BOOSE.ICommand.Execute
+  commentId: M:BOOSE.ICommand.Execute
+  parent: BOOSE.ICommand
+  isExternal: true
+  name: Execute()
+  nameWithType: ICommand.Execute()
+  fullName: BOOSE.ICommand.Execute()
+  spec.csharp:
+  - uid: BOOSE.ICommand.Execute
+    name: Execute
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICommand.Execute
+    name: Execute
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSEapplication.NullCommand.Set*
+  commentId: Overload:BOOSEapplication.NullCommand.Set
+  href: BOOSEapplication.NullCommand.html#BOOSEapplication_NullCommand_Set_BOOSE_StoredProgram_System_String_
+  name: Set
+  nameWithType: NullCommand.Set
+  fullName: BOOSEapplication.NullCommand.Set
+- uid: BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+  parent: BOOSE.ICommand
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: Set(StoredProgram, string)
+  nameWithType: ICommand.Set(StoredProgram, string)
+  fullName: BOOSE.ICommand.Set(BOOSE.StoredProgram, string)
+  nameWithType.vb: ICommand.Set(StoredProgram, String)
+  fullName.vb: BOOSE.ICommand.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
+  spec.csharp:
+  - uid: BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICommand.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSE.StoredProgram
+  commentId: T:BOOSE.StoredProgram
+  parent: BOOSE
+  isExternal: true
+  name: StoredProgram
+  nameWithType: StoredProgram
+  fullName: BOOSE.StoredProgram
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

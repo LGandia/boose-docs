@@ -1,0 +1,473 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapplication.ErrorReport
+  commentId: T:BOOSEapplication.ErrorReport
+  id: ErrorReport
+  parent: BOOSEapplication
+  children:
+  - BOOSEapplication.ErrorReport.Canvas
+  - BOOSEapplication.ErrorReport.Show(System.String)
+  - BOOSEapplication.ErrorReport.TargetPictureBox
+  langs:
+  - csharp
+  - vb
+  name: ErrorReport
+  nameWithType: ErrorReport
+  fullName: BOOSEapplication.ErrorReport
+  type: Class
+  source:
+    remote:
+      path: BOOSEapplication/ErrorReport.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: ErrorReport
+    path: ../BOOSEapplication/ErrorReport.cs
+    startLine: 14
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: >-
+    Gets and shows error messages on the canvas, ensuring each message is shown only once.
+
+    Provides static properties to set the canvas and target picture box for displaying errors.
+
+    Displays error messages using the canvas's ShowError method and invalidates the picture box to trigger a repaint.
+  example: []
+  syntax:
+    content: public class ErrorReport
+    content.vb: Public Class ErrorReport
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BOOSEapplication.ErrorReport.Canvas
+  commentId: P:BOOSEapplication.ErrorReport.Canvas
+  id: Canvas
+  parent: BOOSEapplication.ErrorReport
+  langs:
+  - csharp
+  - vb
+  name: Canvas
+  nameWithType: ErrorReport.Canvas
+  fullName: BOOSEapplication.ErrorReport.Canvas
+  type: Property
+  source:
+    remote:
+      path: BOOSEapplication/ErrorReport.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Canvas
+    path: ../BOOSEapplication/ErrorReport.cs
+    startLine: 19
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Gets or sets the canvas used to display error messages.
+  example: []
+  syntax:
+    content: public static AppCanvas? Canvas { get; set; }
+    parameters: []
+    return:
+      type: BOOSEapplication.AppCanvas
+    content.vb: Public Shared Property Canvas As AppCanvas
+  overload: BOOSEapplication.ErrorReport.Canvas*
+- uid: BOOSEapplication.ErrorReport.TargetPictureBox
+  commentId: P:BOOSEapplication.ErrorReport.TargetPictureBox
+  id: TargetPictureBox
+  parent: BOOSEapplication.ErrorReport
+  langs:
+  - csharp
+  - vb
+  name: TargetPictureBox
+  nameWithType: ErrorReport.TargetPictureBox
+  fullName: BOOSEapplication.ErrorReport.TargetPictureBox
+  type: Property
+  source:
+    remote:
+      path: BOOSEapplication/ErrorReport.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: TargetPictureBox
+    path: ../BOOSEapplication/ErrorReport.cs
+    startLine: 23
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: Gets or sets the target PictureBox where error messages will be displayed.
+  example: []
+  syntax:
+    content: public static PictureBox? TargetPictureBox { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Forms.PictureBox
+    content.vb: Public Shared Property TargetPictureBox As PictureBox
+  overload: BOOSEapplication.ErrorReport.TargetPictureBox*
+- uid: BOOSEapplication.ErrorReport.Show(System.String)
+  commentId: M:BOOSEapplication.ErrorReport.Show(System.String)
+  id: Show(System.String)
+  parent: BOOSEapplication.ErrorReport
+  langs:
+  - csharp
+  - vb
+  name: Show(string)
+  nameWithType: ErrorReport.Show(string)
+  fullName: BOOSEapplication.ErrorReport.Show(string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication/ErrorReport.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Show
+    path: ../BOOSEapplication/ErrorReport.cs
+    startLine: 33
+  assemblies:
+  - BOOSEapplication
+  namespace: BOOSEapplication
+  summary: >-
+    Displays an error message on the canvas if it hasn't been shown before.
+
+    Triggers a repaint of the target PictureBox after displaying the message.
+  example: []
+  syntax:
+    content: public static void Show(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Error message to be displayed
+    content.vb: Public Shared Sub Show(message As String)
+  overload: BOOSEapplication.ErrorReport.Show*
+  nameWithType.vb: ErrorReport.Show(String)
+  fullName.vb: BOOSEapplication.ErrorReport.Show(String)
+  name.vb: Show(String)
+references:
+- uid: BOOSEapplication
+  commentId: N:BOOSEapplication
+  href: BOOSEapplication.html
+  name: BOOSEapplication
+  nameWithType: BOOSEapplication
+  fullName: BOOSEapplication
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSEapplication.ErrorReport.Canvas*
+  commentId: Overload:BOOSEapplication.ErrorReport.Canvas
+  href: BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_Canvas
+  name: Canvas
+  nameWithType: ErrorReport.Canvas
+  fullName: BOOSEapplication.ErrorReport.Canvas
+- uid: BOOSEapplication.AppCanvas
+  commentId: T:BOOSEapplication.AppCanvas
+  parent: BOOSEapplication
+  href: BOOSEapplication.AppCanvas.html
+  name: AppCanvas
+  nameWithType: AppCanvas
+  fullName: BOOSEapplication.AppCanvas
+- uid: BOOSEapplication.ErrorReport.TargetPictureBox*
+  commentId: Overload:BOOSEapplication.ErrorReport.TargetPictureBox
+  href: BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_TargetPictureBox
+  name: TargetPictureBox
+  nameWithType: ErrorReport.TargetPictureBox
+  fullName: BOOSEapplication.ErrorReport.TargetPictureBox
+- uid: System.Windows.Forms.PictureBox
+  commentId: T:System.Windows.Forms.PictureBox
+  parent: System.Windows.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox
+  name: PictureBox
+  nameWithType: PictureBox
+  fullName: System.Windows.Forms.PictureBox
+- uid: System.Windows.Forms
+  commentId: N:System.Windows.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Forms
+  nameWithType: System.Windows.Forms
+  fullName: System.Windows.Forms
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Forms
+    name: Forms
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.forms
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Forms
+    name: Forms
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.forms
+- uid: BOOSEapplication.ErrorReport.Show*
+  commentId: Overload:BOOSEapplication.ErrorReport.Show
+  href: BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_Show_System_String_
+  name: Show
+  nameWithType: ErrorReport.Show
+  fullName: BOOSEapplication.ErrorReport.Show
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -16,14 +16,26 @@ items:
   fullName: BOOSEapplication.AppParser
   type: Class
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppParser.cs
+    remote:
+      path: BOOSEapplication/AppParser.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: AppParser
+    path: ../BOOSEapplication/AppParser.cs
+    startLine: 20
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
   summary: >-
-    Parser for application commands and programs.
+    Parses script lines into executable BOOSE <xref href="BOOSE.ICommand" data-throw-if-not-resolved="false"></xref> objects.
 
-    Implements the <xref href="BOOSE.IParser" data-throw-if-not-resolved="false"></xref> interface.
+    <p>
+
+    The <xref href="BOOSEapplication.AppParser" data-throw-if-not-resolved="false"></xref> is responsible for:
+
+    <ul><li>Normalizing whitespace and removing invisible characters</li><li>Detecting control-flow constructs (IF, WHILE, FOR, METHOD)</li><li>Creating commands via an <xref href="BOOSE.ICommandFactory" data-throw-if-not-resolved="false"></xref></li><li>Assigning parameters and expressions to commands</li><li>Updating method definitions inside <xref href="BOOSEapplication.AppStoredProgram" data-throw-if-not-resolved="false"></xref></li></ul>
+
+    </p>
   example: []
   syntax:
     content: 'public class AppParser : IParser'
@@ -33,13 +45,13 @@ items:
   implements:
   - BOOSE.IParser
   inheritedMembers:
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
 - uid: BOOSEapplication.AppParser.#ctor(BOOSE.ICommandFactory,BOOSE.StoredProgram)
   commentId: M:BOOSEapplication.AppParser.#ctor(BOOSE.ICommandFactory,BOOSE.StoredProgram)
   id: '#ctor(BOOSE.ICommandFactory,BOOSE.StoredProgram)'
@@ -52,27 +64,33 @@ items:
   fullName: BOOSEapplication.AppParser.AppParser(BOOSE.ICommandFactory, BOOSE.StoredProgram)
   type: Constructor
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppParser.cs
+    remote:
+      path: BOOSEapplication/AppParser.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: .ctor
+    path: ../BOOSEapplication/AppParser.cs
+    startLine: 40
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: Initializes a new instance of the <xref href="BOOSEapplication.AppParser" data-throw-if-not-resolved="false"></xref> class with the specified command factory and stored program.
+  summary: Creates a new parser instance.
   example: []
   syntax:
     content: public AppParser(ICommandFactory factory, StoredProgram program)
     parameters:
     - id: factory
       type: BOOSE.ICommandFactory
-      description: The factory used to create command instances
+      description: The command factory used to instantiate commands.
     - id: program
       type: BOOSE.StoredProgram
-      description: The stored program that holds and executes parsed commands
+      description: The program into which parsed commands will be inserted.
     content.vb: Public Sub New(factory As ICommandFactory, program As StoredProgram)
   overload: BOOSEapplication.AppParser.#ctor*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: Thrown if either argument is null
+    description: Thrown if <code class="paramref">factory</code> or <code class="paramref">program</code> is null.
   nameWithType.vb: AppParser.New(ICommandFactory, StoredProgram)
   fullName.vb: BOOSEapplication.AppParser.New(BOOSE.ICommandFactory, BOOSE.StoredProgram)
   name.vb: New(ICommandFactory, StoredProgram)
@@ -88,21 +106,30 @@ items:
   fullName: BOOSEapplication.AppParser.ParseCommand(string)
   type: Method
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppParser.cs
+    remote:
+      path: BOOSEapplication/AppParser.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: ParseCommand
+    path: ../BOOSEapplication/AppParser.cs
+    startLine: 54
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: Parses a single command line into an <xref href="BOOSE.ICommand" data-throw-if-not-resolved="false"></xref> instance.
+  summary: Parses a single line of script text into an executable <xref href="BOOSE.ICommand" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public ICommand ParseCommand(string line)
     parameters:
     - id: line
       type: System.String
-      description: The input line containing the command and its parameters
+      description: The raw script line.
     return:
       type: BOOSE.ICommand
-      description: <xref href="BOOSE.ICommand" data-throw-if-not-resolved="false"></xref> instance representing the parsed comand
+      description: >-
+        A fully configured <xref href="BOOSE.ICommand" data-throw-if-not-resolved="false"></xref> instance, or a <xref href="BOOSEapplication.NullCommand" data-throw-if-not-resolved="false"></xref>
+
+        if the line is empty or represents a structural marker (e.g., method boundaries).
     content.vb: Public Function ParseCommand(line As String) As ICommand
   overload: BOOSEapplication.AppParser.ParseCommand*
   implements:
@@ -122,18 +149,45 @@ items:
   fullName: BOOSEapplication.AppParser.ParseProgram(string)
   type: Method
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppParser.cs
+    remote:
+      path: BOOSEapplication/AppParser.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: ParseProgram
+    path: ../BOOSEapplication/AppParser.cs
+    startLine: 311
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: Parses a multi-line program text into commands and adds them to the stored program.
+  summary: >-
+    Parses an entire script program consisting of multiple lines of text.
+
+    <p>
+
+    This method performs the following steps:
+
+    <ol><li>Resets the program state.</li><li>Splits the input text into individual lines.</li><li>Parses each line into an <xref href="BOOSE.ICommand" data-throw-if-not-resolved="false"></xref> using <xref href="BOOSEapplication.AppParser.ParseCommand(System.String)" data-throw-if-not-resolved="false"></xref>.</li><li>
+
+    Immediately compiles and executes declarations (int, real, array, peek, poke).
+
+    </li><li>
+
+    Adds all other commands to the program's command list.
+
+    </li><li>
+
+    Performs a final compile pass on all stored commands.
+
+    </li></ol>
+
+    </p>
   example: []
   syntax:
     content: public void ParseProgram(string programText)
     parameters:
     - id: programText
       type: System.String
-      description: The full program text containting one command per line
+      description: The full script text to parse and load into the program.
     content.vb: Public Sub ParseProgram(programText As String)
   overload: BOOSEapplication.AppParser.ParseProgram*
   implements:
@@ -142,16 +196,34 @@ items:
   fullName.vb: BOOSEapplication.AppParser.ParseProgram(String)
   name.vb: ParseProgram(String)
 references:
-- uid: BOOSE.IParser
-  commentId: T:BOOSE.IParser
+- uid: BOOSE.ICommand
+  commentId: T:BOOSE.ICommand
   parent: BOOSE
   isExternal: true
-  name: IParser
-  nameWithType: IParser
-  fullName: BOOSE.IParser
+  name: ICommand
+  nameWithType: ICommand
+  fullName: BOOSE.ICommand
+- uid: BOOSEapplication.AppParser
+  commentId: T:BOOSEapplication.AppParser
+  href: BOOSEapplication.AppParser.html
+  name: AppParser
+  nameWithType: AppParser
+  fullName: BOOSEapplication.AppParser
+- uid: BOOSE.ICommandFactory
+  commentId: T:BOOSE.ICommandFactory
+  parent: BOOSE
+  isExternal: true
+  name: ICommandFactory
+  nameWithType: ICommandFactory
+  fullName: BOOSE.ICommandFactory
+- uid: BOOSEapplication.AppStoredProgram
+  commentId: T:BOOSEapplication.AppStoredProgram
+  href: BOOSEapplication.AppStoredProgram.html
+  name: AppStoredProgram
+  nameWithType: AppStoredProgram
+  fullName: BOOSEapplication.AppStoredProgram
 - uid: BOOSEapplication
   commentId: N:BOOSEapplication
-  isExternal: true
   href: BOOSEapplication.html
   name: BOOSEapplication
   nameWithType: BOOSEapplication
@@ -167,78 +239,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
+- uid: BOOSE.IParser
+  commentId: T:BOOSE.IParser
+  parent: BOOSE
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
+  name: IParser
+  nameWithType: IParser
+  fullName: BOOSE.IParser
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -317,6 +324,78 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
@@ -362,28 +441,28 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
   spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
+  - uid: System.Object.ToString
+    name: ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
   spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
+  - uid: System.Object.ToString
+    name: ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
 - uid: BOOSE
@@ -399,13 +478,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: BOOSEapplication.AppParser
-  commentId: T:BOOSEapplication.AppParser
-  isExternal: true
-  href: BOOSEapplication.AppParser.html
-  name: AppParser
-  nameWithType: AppParser
-  fullName: BOOSEapplication.AppParser
 - uid: System.ArgumentNullException
   commentId: T:System.ArgumentNullException
   isExternal: true
@@ -415,7 +487,6 @@ references:
   fullName: System.ArgumentNullException
 - uid: BOOSEapplication.AppParser.#ctor*
   commentId: Overload:BOOSEapplication.AppParser.#ctor
-  isExternal: true
   href: BOOSEapplication.AppParser.html#BOOSEapplication_AppParser__ctor_BOOSE_ICommandFactory_BOOSE_StoredProgram_
   name: AppParser
   nameWithType: AppParser.AppParser
@@ -423,13 +494,6 @@ references:
   nameWithType.vb: AppParser.New
   fullName.vb: BOOSEapplication.AppParser.New
   name.vb: New
-- uid: BOOSE.ICommandFactory
-  commentId: T:BOOSE.ICommandFactory
-  parent: BOOSE
-  isExternal: true
-  name: ICommandFactory
-  nameWithType: ICommandFactory
-  fullName: BOOSE.ICommandFactory
 - uid: BOOSE.StoredProgram
   commentId: T:BOOSE.StoredProgram
   parent: BOOSE
@@ -437,16 +501,14 @@ references:
   name: StoredProgram
   nameWithType: StoredProgram
   fullName: BOOSE.StoredProgram
-- uid: BOOSE.ICommand
-  commentId: T:BOOSE.ICommand
-  parent: BOOSE
-  isExternal: true
-  name: ICommand
-  nameWithType: ICommand
-  fullName: BOOSE.ICommand
+- uid: BOOSEapplication.NullCommand
+  commentId: T:BOOSEapplication.NullCommand
+  href: BOOSEapplication.NullCommand.html
+  name: NullCommand
+  nameWithType: NullCommand
+  fullName: BOOSEapplication.NullCommand
 - uid: BOOSEapplication.AppParser.ParseCommand*
   commentId: Overload:BOOSEapplication.AppParser.ParseCommand
-  isExternal: true
   href: BOOSEapplication.AppParser.html#BOOSEapplication_AppParser_ParseCommand_System_String_
   name: ParseCommand
   nameWithType: AppParser.ParseCommand
@@ -493,9 +555,38 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: BOOSEapplication.AppParser.ParseCommand(System.String)
+  commentId: M:BOOSEapplication.AppParser.ParseCommand(System.String)
+  isExternal: true
+  href: BOOSEapplication.AppParser.html#BOOSEapplication_AppParser_ParseCommand_System_String_
+  name: ParseCommand(string)
+  nameWithType: AppParser.ParseCommand(string)
+  fullName: BOOSEapplication.AppParser.ParseCommand(string)
+  nameWithType.vb: AppParser.ParseCommand(String)
+  fullName.vb: BOOSEapplication.AppParser.ParseCommand(String)
+  name.vb: ParseCommand(String)
+  spec.csharp:
+  - uid: BOOSEapplication.AppParser.ParseCommand(System.String)
+    name: ParseCommand
+    href: BOOSEapplication.AppParser.html#BOOSEapplication_AppParser_ParseCommand_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSEapplication.AppParser.ParseCommand(System.String)
+    name: ParseCommand
+    href: BOOSEapplication.AppParser.html#BOOSEapplication_AppParser_ParseCommand_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: BOOSEapplication.AppParser.ParseProgram*
   commentId: Overload:BOOSEapplication.AppParser.ParseProgram
-  isExternal: true
   href: BOOSEapplication.AppParser.html#BOOSEapplication_AppParser_ParseProgram_System_String_
   name: ParseProgram
   nameWithType: AppParser.ParseProgram

@@ -1,0 +1,1373 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapplication.Tests.AppParserTests
+  commentId: T:BOOSEapplication.Tests.AppParserTests
+  id: AppParserTests
+  parent: BOOSEapplication.Tests
+  children:
+  - BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray
+  - BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign
+  - BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall
+  - BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle
+  - BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand
+  - BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse
+  - BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd
+  - BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd
+  - BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod
+  - BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd
+  - BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor
+  - BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf
+  - BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt
+  - BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod
+  - BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand
+  - BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek
+  - BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke
+  - BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal
+  - BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect
+  - BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile
+  - BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite
+  langs:
+  - csharp
+  - vb
+  name: AppParserTests
+  nameWithType: AppParserTests
+  fullName: BOOSEapplication.Tests.AppParserTests
+  type: Class
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: AppParserTests
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 16
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: >-
+    Unit tests for the <xref href="BOOSEapplication.AppParser" data-throw-if-not-resolved="false"></xref> class.
+
+    Ensures that each command string is parsed into the correct
+
+    custom command type defined in <xref href="BOOSEapplication.AppCommandFactory" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [TestClass]
+
+      public class AppParserTests
+    content.vb: >-
+      <TestClass>
+
+      Public Class AppParserTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf
+  id: Parse_IfCommand_ReturnsAppIf
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_IfCommand_ReturnsAppIf()
+  nameWithType: AppParserTests.Parse_IfCommand_ReturnsAppIf()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_IfCommand_ReturnsAppIf
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 38
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that an IF statement is parsed into an <xref href="BOOSEapplication.AppIf" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_IfCommand_ReturnsAppIf()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_IfCommand_ReturnsAppIf()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse
+  id: Parse_ElseCommand_ReturnsAppElse
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_ElseCommand_ReturnsAppElse()
+  nameWithType: AppParserTests.Parse_ElseCommand_ReturnsAppElse()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_ElseCommand_ReturnsAppElse
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 49
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that an ELSE statement is parsed into an <xref href="AppElse" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_ElseCommand_ReturnsAppElse()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_ElseCommand_ReturnsAppElse()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd
+  id: Parse_EndIfCommand_ReturnsAppEnd
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_EndIfCommand_ReturnsAppEnd()
+  nameWithType: AppParserTests.Parse_EndIfCommand_ReturnsAppEnd()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_EndIfCommand_ReturnsAppEnd
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 60
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that END IF is parsed into an <xref href="BOOSEapplication.AppEnd" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_EndIfCommand_ReturnsAppEnd()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_EndIfCommand_ReturnsAppEnd()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile
+  id: Parse_WhileCommand_ReturnsAppWhile
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_WhileCommand_ReturnsAppWhile()
+  nameWithType: AppParserTests.Parse_WhileCommand_ReturnsAppWhile()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_WhileCommand_ReturnsAppWhile
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 71
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that a WHILE loop is parsed into an <xref href="BOOSEapplication.AppWhile" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_WhileCommand_ReturnsAppWhile()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_WhileCommand_ReturnsAppWhile()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd
+  id: Parse_EndWhileCommand_ReturnsAppEnd
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_EndWhileCommand_ReturnsAppEnd()
+  nameWithType: AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_EndWhileCommand_ReturnsAppEnd
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 82
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that END WHILE is parsed into an <xref href="BOOSEapplication.AppEnd" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_EndWhileCommand_ReturnsAppEnd()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_EndWhileCommand_ReturnsAppEnd()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor
+  id: Parse_ForCommand_ReturnsAppFor
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_ForCommand_ReturnsAppFor()
+  nameWithType: AppParserTests.Parse_ForCommand_ReturnsAppFor()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_ForCommand_ReturnsAppFor
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 93
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that a FOR loop is parsed into an <xref href="BOOSEapplication.AppFor" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_ForCommand_ReturnsAppFor()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_ForCommand_ReturnsAppFor()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd
+  id: Parse_EndForCommand_ReturnsAppEnd
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_EndForCommand_ReturnsAppEnd()
+  nameWithType: AppParserTests.Parse_EndForCommand_ReturnsAppEnd()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_EndForCommand_ReturnsAppEnd
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 104
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that END FOR is parsed into an <xref href="BOOSEapplication.AppEnd" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_EndForCommand_ReturnsAppEnd()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_EndForCommand_ReturnsAppEnd()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod
+  id: Parse_MethodDefinition_RegistersMethod
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_MethodDefinition_RegistersMethod()
+  nameWithType: AppParserTests.Parse_MethodDefinition_RegistersMethod()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_MethodDefinition_RegistersMethod
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 115
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that a method declaration registers a new method in the program.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_MethodDefinition_RegistersMethod()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_MethodDefinition_RegistersMethod()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod
+  id: Parse_EndMethod_ClearsCurrentMethod
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_EndMethod_ClearsCurrentMethod()
+  nameWithType: AppParserTests.Parse_EndMethod_ClearsCurrentMethod()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_EndMethod_ClearsCurrentMethod
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 129
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Ensures that END METHOD clears the current method context.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_EndMethod_ClearsCurrentMethod()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_EndMethod_ClearsCurrentMethod()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt
+  id: Parse_IntDeclaration_ReturnsAppInt
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_IntDeclaration_ReturnsAppInt()
+  nameWithType: AppParserTests.Parse_IntDeclaration_ReturnsAppInt()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_IntDeclaration_ReturnsAppInt
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 143
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that an int declaration returns an <xref href="BOOSEapplication.AppInt" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_IntDeclaration_ReturnsAppInt()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_IntDeclaration_ReturnsAppInt()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal
+  id: Parse_RealDeclaration_ReturnsAppReal
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_RealDeclaration_ReturnsAppReal()
+  nameWithType: AppParserTests.Parse_RealDeclaration_ReturnsAppReal()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_RealDeclaration_ReturnsAppReal
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 154
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that a real declaration returns an <xref href="BOOSEapplication.AppReal" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_RealDeclaration_ReturnsAppReal()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_RealDeclaration_ReturnsAppReal()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray
+  id: Parse_ArrayDeclaration_ReturnsAppArray
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_ArrayDeclaration_ReturnsAppArray()
+  nameWithType: AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_ArrayDeclaration_ReturnsAppArray
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 165
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that an array declaration returns an <xref href="BOOSEapplication.AppArray" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_ArrayDeclaration_ReturnsAppArray()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_ArrayDeclaration_ReturnsAppArray()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek
+  id: Parse_PeekCommand_ReturnsAppPeek
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_PeekCommand_ReturnsAppPeek()
+  nameWithType: AppParserTests.Parse_PeekCommand_ReturnsAppPeek()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_PeekCommand_ReturnsAppPeek
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 176
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that a peek command returns an <xref href="BOOSEapplication.AppPeek" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_PeekCommand_ReturnsAppPeek()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_PeekCommand_ReturnsAppPeek()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke
+  id: Parse_PokeCommand_ReturnsAppPoke
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_PokeCommand_ReturnsAppPoke()
+  nameWithType: AppParserTests.Parse_PokeCommand_ReturnsAppPoke()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_PokeCommand_ReturnsAppPoke
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 187
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that a poke command returns an <xref href="BOOSEapplication.AppPoke" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_PokeCommand_ReturnsAppPoke()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_PokeCommand_ReturnsAppPoke()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign
+  id: Parse_Assignment_ReturnsAppAssign
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_Assignment_ReturnsAppAssign()
+  nameWithType: AppParserTests.Parse_Assignment_ReturnsAppAssign()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_Assignment_ReturnsAppAssign
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 198
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that an assignment returns an <xref href="BOOSEapplication.AppAssign" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_Assignment_ReturnsAppAssign()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_Assignment_ReturnsAppAssign()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand
+  id: Parse_MoveTo_ReturnsMoveToCommand
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_MoveTo_ReturnsMoveToCommand()
+  nameWithType: AppParserTests.Parse_MoveTo_ReturnsMoveToCommand()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_MoveTo_ReturnsMoveToCommand
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 209
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that MOVETO returns a <xref href="BOOSEapplication.MoveToCommand" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_MoveTo_ReturnsMoveToCommand()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_MoveTo_ReturnsMoveToCommand()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand
+  id: Parse_DrawTo_ReturnsDrawToCommand
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_DrawTo_ReturnsDrawToCommand()
+  nameWithType: AppParserTests.Parse_DrawTo_ReturnsDrawToCommand()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_DrawTo_ReturnsDrawToCommand
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 220
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that DRAWTO returns a <xref href="BOOSEapplication.DrawToCommand" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_DrawTo_ReturnsDrawToCommand()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_DrawTo_ReturnsDrawToCommand()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle
+  id: Parse_Circle_ReturnsCircle
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_Circle_ReturnsCircle()
+  nameWithType: AppParserTests.Parse_Circle_ReturnsCircle()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_Circle_ReturnsCircle
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 231
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that CIRCLE returns a <xref href="BOOSEapplication.Circle" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_Circle_ReturnsCircle()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_Circle_ReturnsCircle()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect
+  id: Parse_Rect_ReturnsRect
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_Rect_ReturnsRect()
+  nameWithType: AppParserTests.Parse_Rect_ReturnsRect()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_Rect_ReturnsRect
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 242
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that RECT returns a <xref href="BOOSEapplication.Rect" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_Rect_ReturnsRect()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_Rect_ReturnsRect()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite
+  id: Parse_Write_ReturnsAppWrite
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_Write_ReturnsAppWrite()
+  nameWithType: AppParserTests.Parse_Write_ReturnsAppWrite()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_Write_ReturnsAppWrite
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 253
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that WRITE returns an <xref href="BOOSEapplication.AppWrite" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_Write_ReturnsAppWrite()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_Write_ReturnsAppWrite()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall
+  commentId: M:BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall
+  id: Parse_Call_ReturnsAppCall
+  parent: BOOSEapplication.Tests.AppParserTests
+  langs:
+  - csharp
+  - vb
+  name: Parse_Call_ReturnsAppCall()
+  nameWithType: AppParserTests.Parse_Call_ReturnsAppCall()
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall()
+  type: Method
+  source:
+    remote:
+      path: BOOSEapplication.Tests/AppParserTests.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Parse_Call_ReturnsAppCall
+    path: ../BOOSEapplication.Tests/AppParserTests.cs
+    startLine: 264
+  assemblies:
+  - BOOSEapplication.Tests
+  namespace: BOOSEapplication.Tests
+  summary: Verifies that CALL returns an <xref href="BOOSEapplication.AppCall" data-throw-if-not-resolved="false"></xref> command.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Parse_Call_ReturnsAppCall()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Parse_Call_ReturnsAppCall()
+  overload: BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+references:
+- uid: BOOSEapplication.AppParser
+  commentId: T:BOOSEapplication.AppParser
+  href: BOOSEapplication.AppParser.html
+  name: AppParser
+  nameWithType: AppParser
+  fullName: BOOSEapplication.AppParser
+- uid: BOOSEapplication.AppCommandFactory
+  commentId: T:BOOSEapplication.AppCommandFactory
+  href: BOOSEapplication.AppCommandFactory.html
+  name: AppCommandFactory
+  nameWithType: AppCommandFactory
+  fullName: BOOSEapplication.AppCommandFactory
+- uid: BOOSEapplication.Tests
+  commentId: N:BOOSEapplication.Tests
+  href: BOOSEapplication.html
+  name: BOOSEapplication.Tests
+  nameWithType: BOOSEapplication.Tests
+  fullName: BOOSEapplication.Tests
+  spec.csharp:
+  - uid: BOOSEapplication
+    name: BOOSEapplication
+    href: BOOSEapplication.html
+  - name: .
+  - uid: BOOSEapplication.Tests
+    name: Tests
+    href: BOOSEapplication.Tests.html
+  spec.vb:
+  - uid: BOOSEapplication
+    name: BOOSEapplication
+    href: BOOSEapplication.html
+  - name: .
+  - uid: BOOSEapplication.Tests
+    name: Tests
+    href: BOOSEapplication.Tests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSEapplication.AppIf
+  commentId: T:BOOSEapplication.AppIf
+  href: BOOSEapplication.AppIf.html
+  name: AppIf
+  nameWithType: AppIf
+  fullName: BOOSEapplication.AppIf
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_IfCommand_ReturnsAppIf
+  name: Parse_IfCommand_ReturnsAppIf
+  nameWithType: AppParserTests.Parse_IfCommand_ReturnsAppIf
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf
+- uid: AppElse
+  commentId: T:AppElse
+  name: AppElse
+  nameWithType: AppElse
+  fullName: AppElse
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_ElseCommand_ReturnsAppElse
+  name: Parse_ElseCommand_ReturnsAppElse
+  nameWithType: AppParserTests.Parse_ElseCommand_ReturnsAppElse
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse
+- uid: BOOSEapplication.AppEnd
+  commentId: T:BOOSEapplication.AppEnd
+  href: BOOSEapplication.AppEnd.html
+  name: AppEnd
+  nameWithType: AppEnd
+  fullName: BOOSEapplication.AppEnd
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_EndIfCommand_ReturnsAppEnd
+  name: Parse_EndIfCommand_ReturnsAppEnd
+  nameWithType: AppParserTests.Parse_EndIfCommand_ReturnsAppEnd
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd
+- uid: BOOSEapplication.AppWhile
+  commentId: T:BOOSEapplication.AppWhile
+  href: BOOSEapplication.AppWhile.html
+  name: AppWhile
+  nameWithType: AppWhile
+  fullName: BOOSEapplication.AppWhile
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_WhileCommand_ReturnsAppWhile
+  name: Parse_WhileCommand_ReturnsAppWhile
+  nameWithType: AppParserTests.Parse_WhileCommand_ReturnsAppWhile
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_EndWhileCommand_ReturnsAppEnd
+  name: Parse_EndWhileCommand_ReturnsAppEnd
+  nameWithType: AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd
+- uid: BOOSEapplication.AppFor
+  commentId: T:BOOSEapplication.AppFor
+  href: BOOSEapplication.AppFor.html
+  name: AppFor
+  nameWithType: AppFor
+  fullName: BOOSEapplication.AppFor
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_ForCommand_ReturnsAppFor
+  name: Parse_ForCommand_ReturnsAppFor
+  nameWithType: AppParserTests.Parse_ForCommand_ReturnsAppFor
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_EndForCommand_ReturnsAppEnd
+  name: Parse_EndForCommand_ReturnsAppEnd
+  nameWithType: AppParserTests.Parse_EndForCommand_ReturnsAppEnd
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_MethodDefinition_RegistersMethod
+  name: Parse_MethodDefinition_RegistersMethod
+  nameWithType: AppParserTests.Parse_MethodDefinition_RegistersMethod
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_EndMethod_ClearsCurrentMethod
+  name: Parse_EndMethod_ClearsCurrentMethod
+  nameWithType: AppParserTests.Parse_EndMethod_ClearsCurrentMethod
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod
+- uid: BOOSEapplication.AppInt
+  commentId: T:BOOSEapplication.AppInt
+  href: BOOSEapplication.AppInt.html
+  name: AppInt
+  nameWithType: AppInt
+  fullName: BOOSEapplication.AppInt
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_IntDeclaration_ReturnsAppInt
+  name: Parse_IntDeclaration_ReturnsAppInt
+  nameWithType: AppParserTests.Parse_IntDeclaration_ReturnsAppInt
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt
+- uid: BOOSEapplication.AppReal
+  commentId: T:BOOSEapplication.AppReal
+  href: BOOSEapplication.AppReal.html
+  name: AppReal
+  nameWithType: AppReal
+  fullName: BOOSEapplication.AppReal
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_RealDeclaration_ReturnsAppReal
+  name: Parse_RealDeclaration_ReturnsAppReal
+  nameWithType: AppParserTests.Parse_RealDeclaration_ReturnsAppReal
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal
+- uid: BOOSEapplication.AppArray
+  commentId: T:BOOSEapplication.AppArray
+  href: BOOSEapplication.AppArray.html
+  name: AppArray
+  nameWithType: AppArray
+  fullName: BOOSEapplication.AppArray
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_ArrayDeclaration_ReturnsAppArray
+  name: Parse_ArrayDeclaration_ReturnsAppArray
+  nameWithType: AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray
+- uid: BOOSEapplication.AppPeek
+  commentId: T:BOOSEapplication.AppPeek
+  href: BOOSEapplication.AppPeek.html
+  name: AppPeek
+  nameWithType: AppPeek
+  fullName: BOOSEapplication.AppPeek
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_PeekCommand_ReturnsAppPeek
+  name: Parse_PeekCommand_ReturnsAppPeek
+  nameWithType: AppParserTests.Parse_PeekCommand_ReturnsAppPeek
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek
+- uid: BOOSEapplication.AppPoke
+  commentId: T:BOOSEapplication.AppPoke
+  href: BOOSEapplication.AppPoke.html
+  name: AppPoke
+  nameWithType: AppPoke
+  fullName: BOOSEapplication.AppPoke
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_PokeCommand_ReturnsAppPoke
+  name: Parse_PokeCommand_ReturnsAppPoke
+  nameWithType: AppParserTests.Parse_PokeCommand_ReturnsAppPoke
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke
+- uid: BOOSEapplication.AppAssign
+  commentId: T:BOOSEapplication.AppAssign
+  href: BOOSEapplication.AppAssign.html
+  name: AppAssign
+  nameWithType: AppAssign
+  fullName: BOOSEapplication.AppAssign
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_Assignment_ReturnsAppAssign
+  name: Parse_Assignment_ReturnsAppAssign
+  nameWithType: AppParserTests.Parse_Assignment_ReturnsAppAssign
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign
+- uid: BOOSEapplication.MoveToCommand
+  commentId: T:BOOSEapplication.MoveToCommand
+  href: BOOSEapplication.MoveToCommand.html
+  name: MoveToCommand
+  nameWithType: MoveToCommand
+  fullName: BOOSEapplication.MoveToCommand
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_MoveTo_ReturnsMoveToCommand
+  name: Parse_MoveTo_ReturnsMoveToCommand
+  nameWithType: AppParserTests.Parse_MoveTo_ReturnsMoveToCommand
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand
+- uid: BOOSEapplication.DrawToCommand
+  commentId: T:BOOSEapplication.DrawToCommand
+  href: BOOSEapplication.DrawToCommand.html
+  name: DrawToCommand
+  nameWithType: DrawToCommand
+  fullName: BOOSEapplication.DrawToCommand
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_DrawTo_ReturnsDrawToCommand
+  name: Parse_DrawTo_ReturnsDrawToCommand
+  nameWithType: AppParserTests.Parse_DrawTo_ReturnsDrawToCommand
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand
+- uid: BOOSEapplication.Circle
+  commentId: T:BOOSEapplication.Circle
+  href: BOOSEapplication.Circle.html
+  name: Circle
+  nameWithType: Circle
+  fullName: BOOSEapplication.Circle
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_Circle_ReturnsCircle
+  name: Parse_Circle_ReturnsCircle
+  nameWithType: AppParserTests.Parse_Circle_ReturnsCircle
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle
+- uid: BOOSEapplication.Rect
+  commentId: T:BOOSEapplication.Rect
+  href: BOOSEapplication.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: BOOSEapplication.Rect
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_Rect_ReturnsRect
+  name: Parse_Rect_ReturnsRect
+  nameWithType: AppParserTests.Parse_Rect_ReturnsRect
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect
+- uid: BOOSEapplication.AppWrite
+  commentId: T:BOOSEapplication.AppWrite
+  href: BOOSEapplication.AppWrite.html
+  name: AppWrite
+  nameWithType: AppWrite
+  fullName: BOOSEapplication.AppWrite
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_Write_ReturnsAppWrite
+  name: Parse_Write_ReturnsAppWrite
+  nameWithType: AppParserTests.Parse_Write_ReturnsAppWrite
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite
+- uid: BOOSEapplication.AppCall
+  commentId: T:BOOSEapplication.AppCall
+  href: BOOSEapplication.AppCall.html
+  name: AppCall
+  nameWithType: AppCall
+  fullName: BOOSEapplication.AppCall
+- uid: BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall*
+  commentId: Overload:BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall
+  href: BOOSEapplication.Tests.AppParserTests.html#BOOSEapplication_Tests_AppParserTests_Parse_Call_ReturnsAppCall
+  name: Parse_Call_ReturnsAppCall
+  nameWithType: AppParserTests.Parse_Call_ReturnsAppCall
+  fullName: BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall

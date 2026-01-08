@@ -5,13 +5,12 @@ items:
   id: AppCommandOneParameter
   parent: BOOSEapplication
   children:
-  - BOOSEapplication.AppCommandOneParameter.#ctor
   - BOOSEapplication.AppCommandOneParameter.CheckParameters(System.String[])
   - BOOSEapplication.AppCommandOneParameter.Compile
   - BOOSEapplication.AppCommandOneParameter.Execute
   - BOOSEapplication.AppCommandOneParameter.Program
   - BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram,System.String)
-  - BOOSEapplication.AppCommandOneParameter.param1
+  - BOOSEapplication.AppCommandOneParameter.rawParam
   langs:
   - csharp
   - vb
@@ -20,12 +19,18 @@ items:
   fullName: BOOSEapplication.AppCommandOneParameter
   type: Class
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppCommandOneParameter.cs
+    remote:
+      path: BOOSEapplication/AppCommandOneParameter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: AppCommandOneParameter
+    path: ../BOOSEapplication/AppCommandOneParameter.cs
+    startLine: 9
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
   summary: >-
-    Abstract base class for commands that require a single integer parameter.
+    Abstract base class for commands that require a single parameter.
 
     Implements the <xref href="BOOSE.ICommand" data-throw-if-not-resolved="false"></xref> interface.
   example: []
@@ -39,36 +44,42 @@ items:
   implements:
   - BOOSE.ICommand
   inheritedMembers:
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: BOOSEapplication.AppCommandOneParameter.param1
-  commentId: F:BOOSEapplication.AppCommandOneParameter.param1
-  id: param1
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BOOSEapplication.AppCommandOneParameter.rawParam
+  commentId: F:BOOSEapplication.AppCommandOneParameter.rawParam
+  id: rawParam
   parent: BOOSEapplication.AppCommandOneParameter
   langs:
   - csharp
   - vb
-  name: param1
-  nameWithType: AppCommandOneParameter.param1
-  fullName: BOOSEapplication.AppCommandOneParameter.param1
+  name: rawParam
+  nameWithType: AppCommandOneParameter.rawParam
+  fullName: BOOSEapplication.AppCommandOneParameter.rawParam
   type: Field
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppCommandOneParameter.cs
+    remote:
+      path: BOOSEapplication/AppCommandOneParameter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: rawParam
+    path: ../BOOSEapplication/AppCommandOneParameter.cs
+    startLine: 14
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: The parsed integer parameter used by the command.
+  summary: The raw parameter string (could be literal, variable, or expression).
   example: []
   syntax:
-    content: protected int param1
+    content: protected string rawParam
     return:
-      type: System.Int32
-    content.vb: Protected param1 As Integer
+      type: System.String
+    content.vb: Protected rawParam As String
 - uid: BOOSEapplication.AppCommandOneParameter.Program
   commentId: F:BOOSEapplication.AppCommandOneParameter.Program
   id: Program
@@ -81,9 +92,15 @@ items:
   fullName: BOOSEapplication.AppCommandOneParameter.Program
   type: Field
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppCommandOneParameter.cs
+    remote:
+      path: BOOSEapplication/AppCommandOneParameter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Program
+    path: ../BOOSEapplication/AppCommandOneParameter.cs
+    startLine: 19
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
   summary: The stored program context associated with the command.
   example: []
@@ -104,21 +121,25 @@ items:
   fullName: BOOSEapplication.AppCommandOneParameter.Set(BOOSE.StoredProgram, string)
   type: Method
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppCommandOneParameter.cs
+    remote:
+      path: BOOSEapplication/AppCommandOneParameter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Set
+    path: ../BOOSEapplication/AppCommandOneParameter.cs
+    startLine: 24
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: Sets the command context and parses the input parameter string.
+  summary: Sets the command context and stores the raw parameter string.
   example: []
   syntax:
     content: public virtual void Set(StoredProgram program, string parameters)
     parameters:
     - id: program
       type: BOOSE.StoredProgram
-      description: The stored program associated with this command.
     - id: parameters
       type: System.String
-      description: The raw parameter string to parse.
     content.vb: Public Overridable Sub [Set](program As StoredProgram, parameters As String)
   overload: BOOSEapplication.AppCommandOneParameter.Set*
   implements:
@@ -138,9 +159,15 @@ items:
   fullName: BOOSEapplication.AppCommandOneParameter.CheckParameters(string[])
   type: Method
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppCommandOneParameter.cs
+    remote:
+      path: BOOSEapplication/AppCommandOneParameter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: CheckParameters
+    path: ../BOOSEapplication/AppCommandOneParameter.cs
+    startLine: 37
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
   summary: Validates that the command has exactly one parameter.
   example: []
@@ -149,7 +176,6 @@ items:
     parameters:
     - id: parameters
       type: System.String[]
-      description: The array of parsed parameters.
     content.vb: Public Overridable Sub CheckParameters(parameters As String())
   overload: BOOSEapplication.AppCommandOneParameter.CheckParameters*
   implements:
@@ -169,11 +195,16 @@ items:
   fullName: BOOSEapplication.AppCommandOneParameter.Compile()
   type: Method
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppCommandOneParameter.cs
+    remote:
+      path: BOOSEapplication/AppCommandOneParameter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Compile
+    path: ../BOOSEapplication/AppCommandOneParameter.cs
+    startLine: 45
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: Compiles the command logic. Must be implemented by derived classes.
   example: []
   syntax:
     content: public abstract void Compile()
@@ -193,11 +224,16 @@ items:
   fullName: BOOSEapplication.AppCommandOneParameter.Execute()
   type: Method
   source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppCommandOneParameter.cs
+    remote:
+      path: BOOSEapplication/AppCommandOneParameter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-LGandia.git
+    id: Execute
+    path: ../BOOSEapplication/AppCommandOneParameter.cs
+    startLine: 46
   assemblies:
-  - BOOSEapplication.Doc
+  - BOOSEapplication
   namespace: BOOSEapplication
-  summary: Executes the command logic. Must be implemented by derived classes.
   example: []
   syntax:
     content: public abstract void Execute()
@@ -205,29 +241,6 @@ items:
   overload: BOOSEapplication.AppCommandOneParameter.Execute*
   implements:
   - BOOSE.ICommand.Execute
-- uid: BOOSEapplication.AppCommandOneParameter.#ctor
-  commentId: M:BOOSEapplication.AppCommandOneParameter.#ctor
-  id: '#ctor'
-  parent: BOOSEapplication.AppCommandOneParameter
-  langs:
-  - csharp
-  - vb
-  name: AppCommandOneParameter()
-  nameWithType: AppCommandOneParameter.AppCommandOneParameter()
-  fullName: BOOSEapplication.AppCommandOneParameter.AppCommandOneParameter()
-  type: Constructor
-  source:
-    href: https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/a8322c498aac3a407121f011a03c2e8405e52aa1/BOOSEapplication/AppCommandOneParameter.cs
-  assemblies:
-  - BOOSEapplication.Doc
-  namespace: BOOSEapplication
-  syntax:
-    content: protected AppCommandOneParameter()
-    content.vb: Protected Sub New()
-  overload: BOOSEapplication.AppCommandOneParameter.#ctor*
-  nameWithType.vb: AppCommandOneParameter.New()
-  fullName.vb: BOOSEapplication.AppCommandOneParameter.New()
-  name.vb: New()
 references:
 - uid: BOOSE.ICommand
   commentId: T:BOOSE.ICommand
@@ -238,7 +251,6 @@ references:
   fullName: BOOSE.ICommand
 - uid: BOOSEapplication
   commentId: N:BOOSEapplication
-  isExternal: true
   href: BOOSEapplication.html
   name: BOOSEapplication
   nameWithType: BOOSEapplication
@@ -254,78 +266,6 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -404,6 +344,78 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
@@ -449,28 +461,28 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
   spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
+  - uid: System.Object.ToString
+    name: ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
   spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
+  - uid: System.Object.ToString
+    name: ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
 - uid: BOOSE
@@ -486,17 +498,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Int32
-  commentId: T:System.Int32
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: BOOSE.StoredProgram
   commentId: T:BOOSE.StoredProgram
   parent: BOOSE
@@ -506,7 +518,6 @@ references:
   fullName: BOOSE.StoredProgram
 - uid: BOOSEapplication.AppCommandOneParameter.Set*
   commentId: Overload:BOOSEapplication.AppCommandOneParameter.Set
-  isExternal: true
   href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Set_BOOSE_StoredProgram_System_String_
   name: Set
   nameWithType: AppCommandOneParameter.Set
@@ -552,20 +563,8 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: BOOSEapplication.AppCommandOneParameter.CheckParameters*
   commentId: Overload:BOOSEapplication.AppCommandOneParameter.CheckParameters
-  isExternal: true
   href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_CheckParameters_System_String___
   name: CheckParameters
   nameWithType: AppCommandOneParameter.CheckParameters
@@ -630,7 +629,6 @@ references:
   - name: )
 - uid: BOOSEapplication.AppCommandOneParameter.Compile*
   commentId: Overload:BOOSEapplication.AppCommandOneParameter.Compile
-  isExternal: true
   href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Compile
   name: Compile
   nameWithType: AppCommandOneParameter.Compile
@@ -656,7 +654,6 @@ references:
   - name: )
 - uid: BOOSEapplication.AppCommandOneParameter.Execute*
   commentId: Overload:BOOSEapplication.AppCommandOneParameter.Execute
-  isExternal: true
   href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter_Execute
   name: Execute
   nameWithType: AppCommandOneParameter.Execute
@@ -680,13 +677,3 @@ references:
     isExternal: true
   - name: (
   - name: )
-- uid: BOOSEapplication.AppCommandOneParameter.#ctor*
-  commentId: Overload:BOOSEapplication.AppCommandOneParameter.#ctor
-  isExternal: true
-  href: BOOSEapplication.AppCommandOneParameter.html#BOOSEapplication_AppCommandOneParameter__ctor
-  name: AppCommandOneParameter
-  nameWithType: AppCommandOneParameter.AppCommandOneParameter
-  fullName: BOOSEapplication.AppCommandOneParameter.AppCommandOneParameter
-  nameWithType.vb: AppCommandOneParameter.New
-  fullName.vb: BOOSEapplication.AppCommandOneParameter.New
-  name.vb: New
