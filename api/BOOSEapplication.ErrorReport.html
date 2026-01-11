@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ErrorReport ">
       
-      <meta name="description" content="Gets and shows error messages on the canvas, ensuring each message is shown only once. Provides static properties to set the canvas and target picture box for displaying errors. Displays error messages using the canvas&#39;s ShowError method and invalidates the picture box to trigger a repaint.">
+      <meta name="description" content="Singleton responsible for displaying error messages on the canvas. Ensures each message is shown only once and triggers a repaint of the target PictureBox. Provides static forwarding members for backward compatibility.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="BOOSEapplication_ErrorReport" data-uid="BOOSEapplication.ErrorReport" class="text-break">
-Class ErrorReport  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L15"><i class="bi bi-code-slash"></i></a>
+Class ErrorReport  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,14 +93,14 @@ Class ErrorReport  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>BOOSEapplication.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Gets and shows error messages on the canvas, ensuring each message is shown only once.
-Provides static properties to set the canvas and target picture box for displaying errors.
-Displays error messages using the canvas's ShowError method and invalidates the picture box to trigger a repaint.</p>
+  <div class="markdown summary"><p>Singleton responsible for displaying error messages on the canvas.
+Ensures each message is shown only once and triggers a repaint of the target PictureBox.
+Provides static forwarding members for backward compatibility.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ErrorReport</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ErrorReport</code></pre>
   </div>
 
 
@@ -132,9 +132,6 @@ Displays error messages using the canvas's ShowError method and invalidates the 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
@@ -155,10 +152,11 @@ Displays error messages using the canvas's ShowError method and invalidates the 
 
   <h3 id="BOOSEapplication_ErrorReport_Canvas" data-uid="BOOSEapplication.ErrorReport.Canvas">
   Canvas
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the canvas used to display error messages.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the canvas used for displaying error messages.
+This static property forwards to the Singleton instance for backward compatibility.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -183,19 +181,116 @@ Displays error messages using the canvas's ShowError method and invalidates the 
 
 
 
+  <a id="BOOSEapplication_ErrorReport_CanvasInstance_" data-uid="BOOSEapplication.ErrorReport.CanvasInstance*"></a>
+
+  <h3 id="BOOSEapplication_ErrorReport_CanvasInstance" data-uid="BOOSEapplication.ErrorReport.CanvasInstance">
+  CanvasInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The canvas used to display error messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppCanvas? CanvasInstance { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BOOSEapplication.AppCanvas.html">AppCanvas</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_ErrorReport_Instance_" data-uid="BOOSEapplication.ErrorReport.Instance*"></a>
+
+  <h3 id="BOOSEapplication_ErrorReport_Instance" data-uid="BOOSEapplication.ErrorReport.Instance">
+  Instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the single instance of the <a class="xref" href="BOOSEapplication.ErrorReport.html">ErrorReport</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ErrorReport Instance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BOOSEapplication.ErrorReport.html">ErrorReport</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="BOOSEapplication_ErrorReport_TargetPictureBox_" data-uid="BOOSEapplication.ErrorReport.TargetPictureBox*"></a>
 
   <h3 id="BOOSEapplication_ErrorReport_TargetPictureBox" data-uid="BOOSEapplication.ErrorReport.TargetPictureBox">
   TargetPictureBox
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the target PictureBox where error messages will be displayed.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the PictureBox used for rendering error messages.
+This static property forwards to the Singleton instance for backward compatibility.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static PictureBox? TargetPictureBox { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_ErrorReport_TargetPictureBoxInstance_" data-uid="BOOSEapplication.ErrorReport.TargetPictureBoxInstance*"></a>
+
+  <h3 id="BOOSEapplication_ErrorReport_TargetPictureBoxInstance" data-uid="BOOSEapplication.ErrorReport.TargetPictureBoxInstance">
+  TargetPictureBoxInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The PictureBox where error messages will be rendered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PictureBox? TargetPictureBoxInstance { get; set; }</code></pre>
   </div>
 
 
@@ -223,11 +318,11 @@ Displays error messages using the canvas's ShowError method and invalidates the 
 
   <h3 id="BOOSEapplication_ErrorReport_Show_System_String_" data-uid="BOOSEapplication.ErrorReport.Show(System.String)">
   Show(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Displays an error message on the canvas if it hasn't been shown before.
-Triggers a repaint of the target PictureBox after displaying the message.</p>
+  <div class="markdown level1 summary"><p>Displays an error message using the Singleton instance.
+Ensures the message is only shown once and triggers a repaint.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -238,8 +333,40 @@ Triggers a repaint of the target PictureBox after displaying the message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Error message to be displayed</p>
+    <dd><p>The error message to display.</p>
 </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_ErrorReport_ShowInstance_" data-uid="BOOSEapplication.ErrorReport.ShowInstance*"></a>
+
+  <h3 id="BOOSEapplication_ErrorReport_ShowInstance_System_String_" data-uid="BOOSEapplication.ErrorReport.ShowInstance(System.String)">
+  ShowInstance(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Displays an error message if it has not been shown before and triggers a repaint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowInstance(string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -257,7 +384,7 @@ Triggers a repaint of the target PictureBox after displaying the message.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L15" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/ErrorReport.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

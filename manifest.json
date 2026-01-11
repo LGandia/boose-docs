@@ -364,7 +364,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "BOOSEapplication.ErrorReport",
-      "Summary": "<p sourcefile=\"api/BOOSEapplication.ErrorReport.yml\" sourcestartlinenumber=\"1\">Gets and shows error messages on the canvas, ensuring each message is shown only once.\nProvides static properties to set the canvas and target picture box for displaying errors.\nDisplays error messages using the canvas's ShowError method and invalidates the picture box to trigger a repaint.</p>\n"
+      "Summary": "<p sourcefile=\"api/BOOSEapplication.ErrorReport.yml\" sourcestartlinenumber=\"1\">Singleton responsible for displaying error messages on the canvas.\nEnsures each message is shown only once and triggers a repaint of the target PictureBox.\nProvides static forwarding members for backward compatibility.</p>\n"
     },
     {
       "type": "ManagedReference",

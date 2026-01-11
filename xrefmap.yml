@@ -2029,6 +2029,32 @@ references:
   isSpec: "True"
   fullName: BOOSEapplication.ErrorReport.Canvas
   nameWithType: ErrorReport.Canvas
+- uid: BOOSEapplication.ErrorReport.CanvasInstance
+  name: CanvasInstance
+  href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_CanvasInstance
+  commentId: P:BOOSEapplication.ErrorReport.CanvasInstance
+  fullName: BOOSEapplication.ErrorReport.CanvasInstance
+  nameWithType: ErrorReport.CanvasInstance
+- uid: BOOSEapplication.ErrorReport.CanvasInstance*
+  name: CanvasInstance
+  href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_CanvasInstance_
+  commentId: Overload:BOOSEapplication.ErrorReport.CanvasInstance
+  isSpec: "True"
+  fullName: BOOSEapplication.ErrorReport.CanvasInstance
+  nameWithType: ErrorReport.CanvasInstance
+- uid: BOOSEapplication.ErrorReport.Instance
+  name: Instance
+  href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_Instance
+  commentId: P:BOOSEapplication.ErrorReport.Instance
+  fullName: BOOSEapplication.ErrorReport.Instance
+  nameWithType: ErrorReport.Instance
+- uid: BOOSEapplication.ErrorReport.Instance*
+  name: Instance
+  href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_Instance_
+  commentId: Overload:BOOSEapplication.ErrorReport.Instance
+  isSpec: "True"
+  fullName: BOOSEapplication.ErrorReport.Instance
+  nameWithType: ErrorReport.Instance
 - uid: BOOSEapplication.ErrorReport.Show(System.String)
   name: Show(string)
   href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_Show_System_String_
@@ -2045,6 +2071,22 @@ references:
   isSpec: "True"
   fullName: BOOSEapplication.ErrorReport.Show
   nameWithType: ErrorReport.Show
+- uid: BOOSEapplication.ErrorReport.ShowInstance(System.String)
+  name: ShowInstance(string)
+  href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_ShowInstance_System_String_
+  commentId: M:BOOSEapplication.ErrorReport.ShowInstance(System.String)
+  name.vb: ShowInstance(String)
+  fullName: BOOSEapplication.ErrorReport.ShowInstance(string)
+  fullName.vb: BOOSEapplication.ErrorReport.ShowInstance(String)
+  nameWithType: ErrorReport.ShowInstance(string)
+  nameWithType.vb: ErrorReport.ShowInstance(String)
+- uid: BOOSEapplication.ErrorReport.ShowInstance*
+  name: ShowInstance
+  href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_ShowInstance_
+  commentId: Overload:BOOSEapplication.ErrorReport.ShowInstance
+  isSpec: "True"
+  fullName: BOOSEapplication.ErrorReport.ShowInstance
+  nameWithType: ErrorReport.ShowInstance
 - uid: BOOSEapplication.ErrorReport.TargetPictureBox
   name: TargetPictureBox
   href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_TargetPictureBox
@@ -2058,6 +2100,19 @@ references:
   isSpec: "True"
   fullName: BOOSEapplication.ErrorReport.TargetPictureBox
   nameWithType: ErrorReport.TargetPictureBox
+- uid: BOOSEapplication.ErrorReport.TargetPictureBoxInstance
+  name: TargetPictureBoxInstance
+  href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_TargetPictureBoxInstance
+  commentId: P:BOOSEapplication.ErrorReport.TargetPictureBoxInstance
+  fullName: BOOSEapplication.ErrorReport.TargetPictureBoxInstance
+  nameWithType: ErrorReport.TargetPictureBoxInstance
+- uid: BOOSEapplication.ErrorReport.TargetPictureBoxInstance*
+  name: TargetPictureBoxInstance
+  href: api/BOOSEapplication.ErrorReport.html#BOOSEapplication_ErrorReport_TargetPictureBoxInstance_
+  commentId: Overload:BOOSEapplication.ErrorReport.TargetPictureBoxInstance
+  isSpec: "True"
+  fullName: BOOSEapplication.ErrorReport.TargetPictureBoxInstance
+  nameWithType: ErrorReport.TargetPictureBoxInstance
 - uid: BOOSEapplication.MoveToCommand
   name: MoveToCommand
   href: api/BOOSEapplication.MoveToCommand.html
