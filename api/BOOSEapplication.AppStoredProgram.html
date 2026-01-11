@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AppStoredProgram </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AppStoredProgram ">
+      
+      <meta name="description" content="Represents an application-specific stored program that extends the functionality of a base . This class manages a collection of commands, methods, and a call stack to support program execution and method invocation.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/new/main/apiSpec/new?filename=BOOSEapplication_AppStoredProgram.md&amp;value=---%0Auid%3A%20BOOSEapplication.AppStoredProgram%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BOOSEapplication.AppStoredProgram">
+
+
+
+  <h1 id="BOOSEapplication_AppStoredProgram" data-uid="BOOSEapplication.AppStoredProgram" class="text-break">
+Class AppStoredProgram  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BOOSEapplication.html">BOOSEapplication</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BOOSEapplication.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an application-specific stored program that extends the functionality of a base <span class="xref">BOOSE.StoredProgram</span>. This class manages a collection of commands, methods, and a call stack to support
+program execution and method invocation.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AppStoredProgram : StoredProgram, IList, ICollection, IEnumerable, ICloneable, IStoredProgram</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist">ArrayList</a></div>
+      <div><span class="xref">StoredProgram</span></div>
+      <div><span class="xref">AppStoredProgram</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
+      <div><span class="xref">IStoredProgram</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">StoredProgram.IsValidProgram()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">StoredProgram.SetSyntaxStatus(bool)</a>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.AddMethod(Method)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.GetMethod(string)</a>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.AddVariable(Evaluation)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">StoredProgram.GetVariable(int)</a>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.FindVariable(Evaluation)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.FindVariable(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.VariableExists(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.GetVarValue(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.UpdateVariable(string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.UpdateVariable(string, double)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.UpdateVariable(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.DeleteVariable(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.IsExpression(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.EvaluateExpressionWithString(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.EvaluateExpression(string)</a>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.Push(ConditionalCommand)</span>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.Pop()</span>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.Add(Command)</span>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.NextCommand()</span>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.Commandsleft()</span>
+    </div>
+    <div>
+      <span class="xref">StoredProgram.PC</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.adapter">ArrayList.Adapter(IList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.add">ArrayList.Add(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.addrange">ArrayList.AddRange(ICollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.binarysearch#system-collections-arraylist-binarysearch(system-int32-system-int32-system-object-system-collections-icomparer)">ArrayList.BinarySearch(int, int, object, IComparer)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.binarysearch#system-collections-arraylist-binarysearch(system-object)">ArrayList.BinarySearch(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.binarysearch#system-collections-arraylist-binarysearch(system-object-system-collections-icomparer)">ArrayList.BinarySearch(object, IComparer)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.clear">ArrayList.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.clone">ArrayList.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.contains">ArrayList.Contains(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.copyto#system-collections-arraylist-copyto(system-array)">ArrayList.CopyTo(Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.copyto#system-collections-arraylist-copyto(system-array-system-int32)">ArrayList.CopyTo(Array, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.copyto#system-collections-arraylist-copyto(system-int32-system-array-system-int32-system-int32)">ArrayList.CopyTo(int, Array, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.fixedsize#system-collections-arraylist-fixedsize(system-collections-arraylist)">ArrayList.FixedSize(ArrayList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.fixedsize#system-collections-arraylist-fixedsize(system-collections-ilist)">ArrayList.FixedSize(IList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.getenumerator#system-collections-arraylist-getenumerator">ArrayList.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.getenumerator#system-collections-arraylist-getenumerator(system-int32-system-int32)">ArrayList.GetEnumerator(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.getrange">ArrayList.GetRange(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.indexof#system-collections-arraylist-indexof(system-object)">ArrayList.IndexOf(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.indexof#system-collections-arraylist-indexof(system-object-system-int32)">ArrayList.IndexOf(object, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.indexof#system-collections-arraylist-indexof(system-object-system-int32-system-int32)">ArrayList.IndexOf(object, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.insert">ArrayList.Insert(int, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.insertrange">ArrayList.InsertRange(int, ICollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.lastindexof#system-collections-arraylist-lastindexof(system-object)">ArrayList.LastIndexOf(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.lastindexof#system-collections-arraylist-lastindexof(system-object-system-int32)">ArrayList.LastIndexOf(object, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.lastindexof#system-collections-arraylist-lastindexof(system-object-system-int32-system-int32)">ArrayList.LastIndexOf(object, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.readonly#system-collections-arraylist-readonly(system-collections-arraylist)">ArrayList.ReadOnly(ArrayList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.readonly#system-collections-arraylist-readonly(system-collections-ilist)">ArrayList.ReadOnly(IList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.remove">ArrayList.Remove(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.removeat">ArrayList.RemoveAt(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.removerange">ArrayList.RemoveRange(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.repeat">ArrayList.Repeat(object, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.reverse#system-collections-arraylist-reverse">ArrayList.Reverse()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.reverse#system-collections-arraylist-reverse(system-int32-system-int32)">ArrayList.Reverse(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.setrange">ArrayList.SetRange(int, ICollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.sort#system-collections-arraylist-sort">ArrayList.Sort()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.sort#system-collections-arraylist-sort(system-collections-icomparer)">ArrayList.Sort(IComparer)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.sort#system-collections-arraylist-sort(system-int32-system-int32-system-collections-icomparer)">ArrayList.Sort(int, int, IComparer)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.synchronized#system-collections-arraylist-synchronized(system-collections-arraylist)">ArrayList.Synchronized(ArrayList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.synchronized#system-collections-arraylist-synchronized(system-collections-ilist)">ArrayList.Synchronized(IList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.toarray#system-collections-arraylist-toarray">ArrayList.ToArray()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.toarray#system-collections-arraylist-toarray(system-type)">ArrayList.ToArray(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.trimtosize">ArrayList.TrimToSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.capacity">ArrayList.Capacity</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.count">ArrayList.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.isfixedsize">ArrayList.IsFixedSize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.isreadonly">ArrayList.IsReadOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.issynchronized">ArrayList.IsSynchronized</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">ArrayList.this[int]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.arraylist.syncroot">ArrayList.SyncRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="BOOSEapplication_AppStoredProgram_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This class provides additional functionality for managing commands and methods, including the
+ability to add commands to the main program or to the body of a method, jump to specific execution points, and
+retrieve variables from the current call stack. It also integrates with an <span class="xref">BOOSE.ICanvas</span> for graphical
+operations.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="BOOSEapplication_AppStoredProgram__ctor_" data-uid="BOOSEapplication.AppStoredProgram.#ctor*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram__ctor_BOOSE_ICanvas_" data-uid="BOOSEapplication.AppStoredProgram.#ctor(BOOSE.ICanvas)">
+  AppStoredProgram(ICanvas)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="BOOSEapplication.AppStoredProgram.html">AppStoredProgram</a> class with the specified canvas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppStoredProgram(ICanvas canvas)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>canvas</code> <span class="xref">ICanvas</span></dt>
+    <dd><p>The canvas on which the program operates. Cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="BOOSEapplication_AppStoredProgram_CurrentMethod" data-uid="BOOSEapplication.AppStoredProgram.CurrentMethod">
+  CurrentMethod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the currently selected application method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppMethod CurrentMethod</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BOOSEapplication.AppMethod.html">AppMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="BOOSEapplication_AppStoredProgram_CallStack_" data-uid="BOOSEapplication.AppStoredProgram.CallStack*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_CallStack" data-uid="BOOSEapplication.AppStoredProgram.CallStack">
+  CallStack
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the stack of call frames representing the current execution context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Stack&lt;CallFrame&gt; CallStack { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1">Stack</a>&lt;<a class="xref" href="BOOSEapplication.CallFrame.html">CallFrame</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="BOOSEapplication_AppStoredProgram_CallStack_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The stack is used to track the sequence of method calls or execution frames.  It is
+empty if no calls are currently being tracked.</p>
+</div>
+
+
+
+
+  <a id="BOOSEapplication_AppStoredProgram_Methods_" data-uid="BOOSEapplication.AppStoredProgram.Methods*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_Methods" data-uid="BOOSEapplication.AppStoredProgram.Methods">
+  Methods
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the collection of methods available in the application, indexed by their names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, AppMethod&gt; Methods { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="BOOSEapplication.AppMethod.html">AppMethod</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="BOOSEapplication_AppStoredProgram_Methods_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The dictionary provides a way to look up methods by their names. The keys are
+case-sensitive.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BOOSEapplication_AppStoredProgram_AddToMyProgram_" data-uid="BOOSEapplication.AppStoredProgram.AddToMyProgram*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_AddToMyProgram_BOOSE_ICommand_" data-uid="BOOSEapplication.AppStoredProgram.AddToMyProgram(BOOSE.ICommand)">
+  AddToMyProgram(ICommand)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the specified command to the current method's body or to the general command list if no current method
+is set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddToMyProgram(ICommand command)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <span class="xref">ICommand</span></dt>
+    <dd><p>The command to add. Cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="BOOSEapplication_AppStoredProgram_AddToMyProgram_BOOSE_ICommand__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If a current method is active, the command is added to its body. Otherwise, the
+command is added to a general list of commands. Ensure that <code class="paramref">command</code> is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to avoid unexpected behavior.</p>
+</div>
+
+
+
+
+  <a id="BOOSEapplication_AppStoredProgram_GetCanvas_" data-uid="BOOSEapplication.AppStoredProgram.GetCanvas*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_GetCanvas" data-uid="BOOSEapplication.AppStoredProgram.GetCanvas">
+  GetCanvas()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the current canvas instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICanvas GetCanvas()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ICanvas</span></dt>
+    <dd><p>The <span class="xref">BOOSE.ICanvas</span> instance representing the current canvas.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_AppStoredProgram_GetCommands_" data-uid="BOOSEapplication.AppStoredProgram.GetCommands*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_GetCommands" data-uid="BOOSEapplication.AppStoredProgram.GetCommands">
+  GetCommands()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the list of commands.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ICommand&gt; GetCommands()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">ICommand</span>&gt;</dt>
+    <dd><p>A list of commands implementing the <span class="xref">BOOSE.ICommand</span> interface. The list may be empty if no commands
+are available.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_AppStoredProgram_GetVariable_" data-uid="BOOSEapplication.AppStoredProgram.GetVariable*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_GetVariable_System_String_" data-uid="BOOSEapplication.AppStoredProgram.GetVariable(System.String)">
+  GetVariable(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the value of a variable by its name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Evaluation GetVariable(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the variable to retrieve. This parameter cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Evaluation</span></dt>
+    <dd><p>An <span class="xref">BOOSE.Evaluation</span> object representing the value of the variable if it exists in the current call
+stack frame;  otherwise, the value of the variable from the base context.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="BOOSEapplication_AppStoredProgram_GetVariable_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method first attempts to retrieve the variable from the local scope of the
+current call stack frame.  If the variable is not found in the local scope, it falls back to retrieving the
+variable from the base context.</p>
+</div>
+
+
+
+
+  <a id="BOOSEapplication_AppStoredProgram_JumpTo_" data-uid="BOOSEapplication.AppStoredProgram.JumpTo*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_JumpTo_System_Int32_" data-uid="BOOSEapplication.AppStoredProgram.JumpTo(System.Int32)">
+  JumpTo(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the next index to jump to in the sequence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void JumpTo(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The zero-based index to set as the next position. Must be a non-negative integer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="BOOSEapplication_AppStoredProgram_JumpTo_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method updates the internal state to reflect the specified index. Ensure that
+the provided index is within the valid range for the sequence being managed.</p>
+</div>
+
+
+
+
+  <a id="BOOSEapplication_AppStoredProgram_ResetProgram_" data-uid="BOOSEapplication.AppStoredProgram.ResetProgram*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_ResetProgram" data-uid="BOOSEapplication.AppStoredProgram.ResetProgram">
+  ResetProgram()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets the program state to its initial configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ResetProgram()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="BOOSEapplication_AppStoredProgram_ResetProgram_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method clears all commands, methods, and the call stack, resets the current
+method to null,  and sets the next execution index to -1. It also invokes the base class implementation of
+<a class="xref" href="BOOSEapplication.AppStoredProgram.html#BOOSEapplication_AppStoredProgram_ResetProgram">ResetProgram()</a> to ensure any additional base-level reset logic is applied.</p>
+</div>
+
+
+
+
+  <a id="BOOSEapplication_AppStoredProgram_Run_" data-uid="BOOSEapplication.AppStoredProgram.Run*"></a>
+
+  <h3 id="BOOSEapplication_AppStoredProgram_Run" data-uid="BOOSEapplication.AppStoredProgram.Run">
+  Run()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a sequence of commands in order, with support for modifying the execution flow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Run()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="BOOSEapplication_AppStoredProgram_Run_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method processes commands sequentially from the beginning of the list. If a
+command modifies  the execution flow by setting <code>nextIndex</code> to a non-negative value, the method jumps
+to the  specified index in the command list. Otherwise, it proceeds to the next command in
+sequence.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication/AppStoredProgram.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

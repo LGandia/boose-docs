@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AppParserTests </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AppParserTests ">
+      
+      <meta name="description" content="Unit tests for the  class. Ensures that each command string is parsed into the correct custom command type defined in .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/new/main/apiSpec/new?filename=BOOSEapplication_Tests_AppParserTests.md&amp;value=---%0Auid%3A%20BOOSEapplication.Tests.AppParserTests%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BOOSEapplication.Tests.AppParserTests">
+
+
+
+  <h1 id="BOOSEapplication_Tests_AppParserTests" data-uid="BOOSEapplication.Tests.AppParserTests" class="text-break">
+Class AppParserTests  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BOOSEapplication.html">BOOSEapplication</a>.<a class="xref" href="BOOSEapplication.Tests.html">Tests</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BOOSEapplication.Tests.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Unit tests for the <a class="xref" href="BOOSEapplication.AppParser.html">AppParser</a> class.
+Ensures that each command string is parsed into the correct
+custom command type defined in <a class="xref" href="BOOSEapplication.AppCommandFactory.html">AppCommandFactory</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestClass]
+public class AppParserTests</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AppParserTests</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_ArrayDeclaration_ReturnsAppArray_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_ArrayDeclaration_ReturnsAppArray" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_ArrayDeclaration_ReturnsAppArray">
+  Parse_ArrayDeclaration_ReturnsAppArray()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that an array declaration returns an <a class="xref" href="BOOSEapplication.AppArray.html">AppArray</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_ArrayDeclaration_ReturnsAppArray()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_Assignment_ReturnsAppAssign_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_Assignment_ReturnsAppAssign" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Assignment_ReturnsAppAssign">
+  Parse_Assignment_ReturnsAppAssign()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that an assignment returns an <a class="xref" href="BOOSEapplication.AppAssign.html">AppAssign</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_Assignment_ReturnsAppAssign()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_Call_ReturnsAppCall_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_Call_ReturnsAppCall" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Call_ReturnsAppCall">
+  Parse_Call_ReturnsAppCall()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that CALL returns an <a class="xref" href="BOOSEapplication.AppCall.html">AppCall</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_Call_ReturnsAppCall()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_Circle_ReturnsCircle_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_Circle_ReturnsCircle" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Circle_ReturnsCircle">
+  Parse_Circle_ReturnsCircle()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that CIRCLE returns a <a class="xref" href="BOOSEapplication.Circle.html">Circle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_Circle_ReturnsCircle()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_DrawTo_ReturnsDrawToCommand_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_DrawTo_ReturnsDrawToCommand" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_DrawTo_ReturnsDrawToCommand">
+  Parse_DrawTo_ReturnsDrawToCommand()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that DRAWTO returns a <a class="xref" href="BOOSEapplication.DrawToCommand.html">DrawToCommand</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_DrawTo_ReturnsDrawToCommand()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_ElseCommand_ReturnsAppElse_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_ElseCommand_ReturnsAppElse" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_ElseCommand_ReturnsAppElse">
+  Parse_ElseCommand_ReturnsAppElse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that an ELSE statement is parsed into an <span class="xref">AppElse</span> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_ElseCommand_ReturnsAppElse()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_EndForCommand_ReturnsAppEnd_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_EndForCommand_ReturnsAppEnd" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_EndForCommand_ReturnsAppEnd">
+  Parse_EndForCommand_ReturnsAppEnd()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that END FOR is parsed into an <a class="xref" href="BOOSEapplication.AppEnd.html">AppEnd</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_EndForCommand_ReturnsAppEnd()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_EndIfCommand_ReturnsAppEnd_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_EndIfCommand_ReturnsAppEnd" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_EndIfCommand_ReturnsAppEnd">
+  Parse_EndIfCommand_ReturnsAppEnd()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that END IF is parsed into an <a class="xref" href="BOOSEapplication.AppEnd.html">AppEnd</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_EndIfCommand_ReturnsAppEnd()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_EndMethod_ClearsCurrentMethod_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_EndMethod_ClearsCurrentMethod" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_EndMethod_ClearsCurrentMethod">
+  Parse_EndMethod_ClearsCurrentMethod()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures that END METHOD clears the current method context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_EndMethod_ClearsCurrentMethod()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_EndWhileCommand_ReturnsAppEnd_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_EndWhileCommand_ReturnsAppEnd" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_EndWhileCommand_ReturnsAppEnd">
+  Parse_EndWhileCommand_ReturnsAppEnd()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that END WHILE is parsed into an <a class="xref" href="BOOSEapplication.AppEnd.html">AppEnd</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_EndWhileCommand_ReturnsAppEnd()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_ForCommand_ReturnsAppFor_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_ForCommand_ReturnsAppFor" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_ForCommand_ReturnsAppFor">
+  Parse_ForCommand_ReturnsAppFor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that a FOR loop is parsed into an <a class="xref" href="BOOSEapplication.AppFor.html">AppFor</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_ForCommand_ReturnsAppFor()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_IfCommand_ReturnsAppIf_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_IfCommand_ReturnsAppIf" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_IfCommand_ReturnsAppIf">
+  Parse_IfCommand_ReturnsAppIf()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that an IF statement is parsed into an <a class="xref" href="BOOSEapplication.AppIf.html">AppIf</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_IfCommand_ReturnsAppIf()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_IntDeclaration_ReturnsAppInt_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_IntDeclaration_ReturnsAppInt" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_IntDeclaration_ReturnsAppInt">
+  Parse_IntDeclaration_ReturnsAppInt()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that an int declaration returns an <a class="xref" href="BOOSEapplication.AppInt.html">AppInt</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_IntDeclaration_ReturnsAppInt()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_MethodDefinition_RegistersMethod_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_MethodDefinition_RegistersMethod" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_MethodDefinition_RegistersMethod">
+  Parse_MethodDefinition_RegistersMethod()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures that a method declaration registers a new method in the program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_MethodDefinition_RegistersMethod()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_MoveTo_ReturnsMoveToCommand_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_MoveTo_ReturnsMoveToCommand" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_MoveTo_ReturnsMoveToCommand">
+  Parse_MoveTo_ReturnsMoveToCommand()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that MOVETO returns a <a class="xref" href="BOOSEapplication.MoveToCommand.html">MoveToCommand</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_MoveTo_ReturnsMoveToCommand()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_PeekCommand_ReturnsAppPeek_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_PeekCommand_ReturnsAppPeek" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_PeekCommand_ReturnsAppPeek">
+  Parse_PeekCommand_ReturnsAppPeek()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that a peek command returns an <a class="xref" href="BOOSEapplication.AppPeek.html">AppPeek</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_PeekCommand_ReturnsAppPeek()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_PokeCommand_ReturnsAppPoke_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_PokeCommand_ReturnsAppPoke" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_PokeCommand_ReturnsAppPoke">
+  Parse_PokeCommand_ReturnsAppPoke()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that a poke command returns an <a class="xref" href="BOOSEapplication.AppPoke.html">AppPoke</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_PokeCommand_ReturnsAppPoke()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_RealDeclaration_ReturnsAppReal_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_RealDeclaration_ReturnsAppReal" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_RealDeclaration_ReturnsAppReal">
+  Parse_RealDeclaration_ReturnsAppReal()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that a real declaration returns an <a class="xref" href="BOOSEapplication.AppReal.html">AppReal</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_RealDeclaration_ReturnsAppReal()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_Rect_ReturnsRect_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_Rect_ReturnsRect" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Rect_ReturnsRect">
+  Parse_Rect_ReturnsRect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that RECT returns a <a class="xref" href="BOOSEapplication.Rect.html">Rect</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_Rect_ReturnsRect()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_WhileCommand_ReturnsAppWhile_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_WhileCommand_ReturnsAppWhile" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_WhileCommand_ReturnsAppWhile">
+  Parse_WhileCommand_ReturnsAppWhile()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that a WHILE loop is parsed into an <a class="xref" href="BOOSEapplication.AppWhile.html">AppWhile</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_WhileCommand_ReturnsAppWhile()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapplication_Tests_AppParserTests_Parse_Write_ReturnsAppWrite_" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite*"></a>
+
+  <h3 id="BOOSEapplication_Tests_AppParserTests_Parse_Write_ReturnsAppWrite" data-uid="BOOSEapplication.Tests.AppParserTests.Parse_Write_ReturnsAppWrite">
+  Parse_Write_ReturnsAppWrite()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that WRITE returns an <a class="xref" href="BOOSEapplication.AppWrite.html">AppWrite</a> command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestMethod]
+public void Parse_Write_ReturnsAppWrite()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ASE2025repos/ase-boose-assignment-LGandia/blob/main/BOOSEapplication.Tests/AppParserTests.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
